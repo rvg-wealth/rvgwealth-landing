@@ -1,4 +1,6 @@
 import { ArrowRight, Award, BarChart2, ChevronRight, Clock, Globe, Mail, Search, Shield } from "lucide-react";
+import { Button } from "../components/Button";
+import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export default function EducationPage() {
@@ -30,10 +32,10 @@ export default function EducationPage() {
                 preserve legacy and values across centuries of stewardship.
               </p>
               <div className="flex items-center gap-6">
-                <button className="bg-white text-primary px-8 py-4 rounded-lg font-label-caps tracking-widest flex items-center gap-3 hover:bg-surface-container transition-colors">
+                <Button className="tracking-widest" variant="light" caps>
                   START LEARNING
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </Button>
                 <span className="font-label-caps tracking-widest text-white/60">
                   45 MINUTES &bull; ADVANCED
                 </span>
@@ -42,23 +44,39 @@ export default function EducationPage() {
           </div>
         </section>
         <section className="max-w-7xl mx-auto px-12 mb-stack-lg">
-          <div className="flex flex-wrap items-center justify-between gap-6 border-b border-outline-variant pb-8">
+          <div className="flex flex-wrap items-center justify-between gap-6 border-b border-outline pb-8">
             <div className="flex flex-wrap gap-4">
-              <button className="px-6 py-2 rounded-full border border-primary bg-primary text-on-primary font-label-caps transition-all">
+              <Button className="rounded-full border border-primary" caps variant="primary">
                 All Modules
-              </button>
-              <button className="px-6 py-2 rounded-full border border-outline text-outline hover:border-primary hover:text-primary font-label-caps transition-all">
+              </Button>
+              <Button
+                className="rounded-full text-outline hover:text-primary border-outline"
+                caps
+                variant="outline"
+              >
                 Wealth Foundations
-              </button>
-              <button className="px-6 py-2 rounded-full border border-outline text-outline hover:border-primary hover:text-primary font-label-caps transition-all">
+              </Button>
+              <Button
+                className="rounded-full text-outline hover:text-primary border-outline"
+                caps
+                variant="outline"
+              >
                 Advanced Tax Strategies
-              </button>
-              <button className="px-6 py-2 rounded-full border border-outline text-outline hover:border-primary hover:text-primary font-label-caps transition-all">
+              </Button>
+              <Button
+                className="rounded-full text-outline hover:text-primary border-outline"
+                caps
+                variant="outline"
+              >
                 Global Markets
-              </button>
-              <button className="px-6 py-2 rounded-full border border-outline text-outline hover:border-primary hover:text-primary font-label-caps transition-all">
+              </Button>
+              <Button
+                className="rounded-full text-outline hover:text-primary border-outline"
+                caps
+                variant="outline"
+              >
                 Family Legacy
-              </button>
+              </Button>
             </div>
             <div className="relative w-full md:w-72">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-outline" />
@@ -329,9 +347,14 @@ export default function EducationPage() {
               </p>
             </div>
             <div className="relative z-10 flex flex-col items-center">
-              <button className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-lg font-label-caps tracking-[0.2em] shadow-xl hover:scale-105 transition-transform">
-                CONTACT ADVISOR
-              </button>
+               <Button
+                 className="tracking-[0.2em] shadow-xl hover:scale-105 transition-transform"
+                 size="lg"
+                 variant="secondaryContainer"
+                 caps
+               >
+                 CONTACT ADVISOR
+               </Button>
               <span className="mt-4 text-white/40 text-[10px] font-label-caps uppercase tracking-widest">
                 Available to Premier Members Only
               </span>
@@ -339,102 +362,7 @@ export default function EducationPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-emerald-100/30 bg-stone-50 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12">
-          <div>
-            <div className="text-xl font-bold tracking-widest text-[#4F6352] mb-4 font-headline-lg uppercase">
-              RVG Wealth
-            </div>
-            <p className="text-[#4F6352]/70 font-serif text-sm leading-relaxed mb-6">
-              Expert guidance for modern stewardship and generational preservation.
-            </p>
-            <div className="flex gap-4">
-              <Globe className="w-5 h-5 text-[#4F6352]/40" />
-              <Shield className="w-5 h-5 text-[#4F6352]/40" />
-              <Award className="w-5 h-5 text-[#4F6352]/40" />
-            </div>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">RESOURCES</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Membership
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Education
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">COMPANY</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 font-serif text-sm hover:text-emerald-700 underline-offset-4 hover:underline transition-all"
-                  href="#"
-                >
-                  Legal Disclosures
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">NEWSLETTER</h4>
-            <p className="text-[#4F6352]/70 font-serif text-sm mb-4">
-              Monthly insights on legacy and capital.
-            </p>
-            <div className="flex gap-2">
-              <input
-                className="bg-white border border-emerald-100/50 rounded-lg px-4 py-2 text-sm w-full"
-                placeholder="Email address"
-                type="email"
-              />
-              <button className="bg-primary-container p-2 rounded-lg text-white">
-                <Mail className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-12 mt-16 pt-8 border-t border-emerald-100/10">
-          <p className="text-center text-[#4F6352]/50 font-serif text-xs uppercase tracking-widest">
-            &copy; 2024 RVG Wealth Management. Expert guidance for modern stewardship.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

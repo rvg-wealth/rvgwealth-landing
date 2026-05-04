@@ -33,7 +33,7 @@ export default function ContactPage() {
                     <p>Australia</p>
                   </div>
                 </div>
-                <div className="w-full h-80 rounded-xl overflow-hidden shadow-lg border border-outline-variant relative">
+                <div className="w-full h-80 rounded-xl overflow-hidden shadow-lg border border-outline relative">
                   <img
                     className="w-full h-full object-cover"
                     data-alt="A sophisticated map view of the Sydney financial district skyline with soft daylight reflecting off glass skyscrapers. The image maintains a professional, minimalist aesthetic with subtle sage and ivory tones, highlighting the iconic architectural landscape. The mood is serene and prestigious, fitting for a high-end wealth management firm headquarters location."
@@ -53,7 +53,7 @@ export default function ContactPage() {
                         Full Name
                       </label>
                       <input
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
+                        className="w-full bg-surface-container-low border-b-2 border-outline focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
                         placeholder="Julian Montgomery"
                         type="text"
                       />
@@ -63,7 +63,7 @@ export default function ContactPage() {
                         Email Address
                       </label>
                       <input
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
+                        className="w-full bg-surface-container-low border-b-2 border-outline focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
                         placeholder="julian@example.com"
                         type="email"
                       />
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     </label>
                     <div className="relative">
                       <select
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none appearance-none cursor-pointer"
+                        className="w-full bg-surface-container-low border-b-2 border-outline focus:border-secondary transition-all px-0 py-3 focus:outline-none appearance-none cursor-pointer"
                         defaultValue="mid"
                       >
                         <option value="low">&lt;$1M</option>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                       Message
                     </label>
                     <textarea
-                      className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300 resize-none"
+                      className="w-full bg-surface-container-low border-b-2 border-outline focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300 resize-none"
                       placeholder="How may we assist in your financial stewardship?"
                       rows={4}
                     ></textarea>

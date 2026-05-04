@@ -10,9 +10,9 @@ import {
   ShieldCheck,
   Star,
 } from "lucide-react";
-import { SiteHeader } from "./components/SiteHeader";
-import { SiteFooter } from "./components/SiteFooter";
 import { Button } from "./components/Button";
+import { SiteFooter } from "./components/SiteFooter";
+import { SiteHeader } from "./components/SiteHeader";
 
 export default function Home() {
   return (
@@ -57,7 +57,7 @@ export default function Home() {
         </section>
         <section className="py-16 bg-surface-container-low">
           <div className="max-w-7xl mx-auto px-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-y border-emerald-100/30 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-y border-emerald-200/60 py-12">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary">
                   <BarChart3 className="w-5 h-5" />
@@ -97,13 +97,13 @@ export default function Home() {
                   your portfolio is as resilient as it is diversified.
                 </p>
               </div>
-              <button className="text-primary font-label-caps flex items-center gap-2 group">
-                View All Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+                <button className="text-primary font-label-caps flex items-center gap-2 group">
+                  View All Services
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-[600px]">
-              <div className="md:col-span-8 glass-card rounded-3xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer border border-[#E0E5E1]">
+              <div className="md:col-span-8 glass-card rounded-3xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer">
                 <img
                   alt="Investment Planning"
                   className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
@@ -123,7 +123,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col border border-[#E0E5E1]">
+              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col">
                 <div className="mb-auto">
                   <div className="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center text-tertiary-fixed-dim mb-8">
                     <Building2 className="w-7 h-7" />
@@ -140,7 +140,7 @@ export default function Home() {
                   Details <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col border border-[#E0E5E1]">
+              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col">
                 <div className="mb-auto">
                   <div className="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center text-primary mb-8">
                     <Leaf className="w-7 h-7" />
@@ -155,7 +155,7 @@ export default function Home() {
                   Details <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="md:col-span-8 glass-card rounded-3xl p-10 flex items-center justify-between border border-[#E0E5E1]">
+              <div className="md:col-span-8 glass-card rounded-3xl p-10 flex items-center justify-between">
                 <div className="max-w-sm">
                   <h3 className="font-headline-lg text-primary mb-2">
                     Education Funds
@@ -199,7 +199,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="relative flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
-              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl border border-[#E0E5E1]">
+              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl">
                 <div className="flex gap-1 text-secondary mb-6">
                   <Star className="w-5 h-5 fill-secondary text-secondary" />
                   <Star className="w-5 h-5 fill-secondary text-secondary" />
@@ -229,7 +229,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl border border-[#E0E5E1]">
+              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl">
                 <div className="flex gap-1 text-secondary mb-6">
                   <Star className="w-5 h-5 fill-secondary text-secondary" />
                   <Star className="w-5 h-5 fill-secondary text-secondary" />
@@ -286,9 +286,9 @@ export default function Home() {
                   <span className="text-3xl font-display-xl text-on-primary mb-6">
                     $1.5k<span className="text-sm text-white/50">/yr</span>
                   </span>
-                  <button className="w-full py-4 bg-white text-primary rounded-xl font-label-caps hover:bg-emerald-50 transition-colors">
-                    Select Tier
-                  </button>
+                <Button className="w-full rounded-xl" caps variant="light">
+                  Select Tier
+                </Button>
                 </div>
                 <div className="bg-white p-10 rounded-3xl border border-white/20 flex flex-col items-center scale-105 shadow-2xl relative z-10">
                   <div className="absolute -top-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
@@ -298,18 +298,18 @@ export default function Home() {
                   <span className="text-3xl font-display-xl text-primary mb-6">
                     $5.0k<span className="text-sm text-primary/40">/yr</span>
                   </span>
-                  <button className="w-full py-4 bg-primary text-on-primary rounded-xl font-label-caps hover:bg-primary/90 transition-colors">
-                    Select Tier
-                  </button>
+                <Button className="w-full rounded-xl" caps>
+                  Select Tier
+                </Button>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xl p-10 rounded-3xl border border-white/20 flex flex-col items-center">
                   <h3 className="text-on-primary font-headline-md mb-2">Legacy</h3>
                   <span className="text-3xl font-display-xl text-on-primary mb-6">
                     Custom
                   </span>
-                  <button className="w-full py-4 bg-white text-primary rounded-xl font-label-caps hover:bg-emerald-50 transition-colors">
-                    Contact Us
-                  </button>
+                <Button className="w-full rounded-xl" caps variant="light">
+                  Contact Us
+                </Button>
                 </div>
               </div>
             </div>

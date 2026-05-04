@@ -1,4 +1,6 @@
 import { CheckCircle, ChevronDown, ShieldCheck, Star, Users } from "lucide-react";
+import { Button } from "../components/Button";
+import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export default function MembershipPage() {
@@ -62,9 +64,9 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <button className="mt-auto w-full py-4 border border-outline text-primary rounded-lg font-label-caps hover:bg-surface-container transition-colors">
+            <Button className="mt-auto w-full" caps variant="outline">
               ENROLL IN FOUNDATION
-            </button>
+            </Button>
           </div>
           <div className="relative bg-primary-container text-on-primary-container rounded-xl p-10 flex flex-col shadow-[0_30px_60px_rgba(79,99,82,0.15)] ring-1 ring-secondary/30 transition-transform hover:scale-[1.03] duration-500 z-10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-container text-on-secondary-container px-6 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-widest shadow-lg">
@@ -112,9 +114,13 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <button className="mt-auto w-full py-4 bg-secondary-container text-on-secondary-container rounded-lg font-label-caps hover:opacity-90 transition-opacity shadow-[0_4px_15px_rgba(254,214,91,0.3)]">
+            <Button
+              className="mt-auto w-full shadow-[0_4px_15px_rgba(254,214,91,0.3)]"
+              caps
+              variant="secondaryContainer"
+            >
               APPLY FOR SOVEREIGN
-            </button>
+            </Button>
           </div>
           <div className="glass-card luminous-border rounded-xl p-10 flex flex-col transition-transform hover:scale-[1.02] duration-500">
             <div className="mb-8">
@@ -159,9 +165,9 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <button className="mt-auto w-full py-4 border border-outline text-primary rounded-lg font-label-caps hover:bg-surface-container transition-colors">
+            <Button className="mt-auto w-full" caps variant="outline">
               ENROLL IN LEGACY
-            </button>
+            </Button>
           </div>
         </div>
         <section className="mt-32 grid md:grid-cols-2 gap-16 items-center">
@@ -270,105 +276,7 @@ export default function MembershipPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-emerald-100/30 bg-stone-50 dark:bg-stone-950">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12 py-24">
-          <div className="col-span-1 md:col-span-1">
-            <div className="text-xl font-bold tracking-widest text-[#4F6352] dark:text-emerald-50 mb-4 font-headline-lg">
-              RVG WEALTH
-            </div>
-            <p className="font-serif text-sm leading-relaxed text-[#4F6352]/70 dark:text-emerald-200/70">
-              © 2024 RVG Wealth Management. Expert guidance for modern stewardship.
-            </p>
-          </div>
-          <div>
-            <h5 className="font-label-caps text-[#4F6352] mb-6">SERVICES</h5>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Private Banking
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Asset Management
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Tax Strategy
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-label-caps text-[#4F6352] mb-6">FIRM</h5>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Our Heritage
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Leadership
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-label-caps text-[#4F6352] mb-6">LEGAL</h5>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Legal Disclosures
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  SEC Filings
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

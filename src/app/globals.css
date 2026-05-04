@@ -172,23 +172,23 @@ textarea {
 .glass-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(79, 99, 82, 0.22);
   box-shadow: 0 20px 40px rgba(79, 99, 82, 0.08);
 }
 
 .glass-surface {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(79, 99, 82, 0.22);
   box-shadow: 0 4px 30px rgba(79, 99, 82, 0.08);
 }
 
 .rim-light {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(79, 99, 82, 0.25);
 }
 
 .luminous-border {
-  border: 1px solid #e0e5e1;
+  border: 1px solid rgba(79, 99, 82, 0.25);
 }
 
 .gold-accent {
