@@ -1,27 +1,39 @@
 import { ArrowRight, ChevronDown, MapPin, Megaphone, Phone } from "lucide-react";
 import { Button } from "../components/Button";
+import { ContactInfoCard } from "../components/ContactInfoCard";
+import { PageHeader } from "../components/PageHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+
+const contactChannels = [
+  {
+    icon: Phone,
+    title: "Direct Inquiry",
+    value: "+61 (2) 5550 1200",
+    iconBg: "bg-primary-fixed",
+    iconColor: "text-primary",
+  },
+  {
+    icon: Megaphone,
+    title: "Press & Media",
+    value: "press@rvgwealth.com",
+    iconBg: "bg-tertiary-fixed",
+    iconColor: "text-tertiary",
+  },
+];
 
 export default function ContactPage() {
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
       <SiteHeader activeHref="/contact" />
       <main className="pt-40 pb-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <header className="mb-24">
-          <span className="font-label-caps text-secondary uppercase tracking-[0.3em] mb-4 block">
-            Get in Touch
-          </span>
-          <h1 className="font-display-xl text-primary mb-6">
-            Begin Your Stewardship Journey.
-          </h1>
-          <p className="font-body-lg text-outline max-w-2xl">
-            Connect with our advisory team to discuss your family's financial
-            future. Our heritage-focused approach ensures your legacy is preserved
-            with the utmost discretion.
-          </p>
-        </header>
+        <PageHeader
+          eyebrow="Get in Touch"
+          title="Begin Your Stewardship Journey."
+          description="Connect with our advisory team to discuss your family's financial future. Our heritage-focused approach ensures your legacy is preserved with the utmost discretion."
+        />
 
+        {/* Form + map */}
         <section className="mb-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 space-y-12">
@@ -40,37 +52,20 @@ export default function ContactPage() {
                 <div className="w-full h-80 rounded-xl overflow-hidden border border-outline-variant/40 relative">
                   <img
                     className="w-full h-full object-cover"
-                    data-location="Sydney"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZHzG-vtgpayeLvjUsoJcd_y92XG7vkpizKVmaSPwrit7_SpMWzPFu2lLpNYAXrbSDhfbs0P07oXzUq1aYOYlPdi5nH5L0aM9cd9mmlt2dUdUCAogScwVu37e4DRWBVG7MqkueoM4QIY5DsKZkVmpmHTciHNRowy6QeFtYgxz7TrbIjqdbkYxlteIF1sF1Z2NJjjOD8taPR2L7yLF_mFsVFjoWRPXoKrng7h2rAi07oTGd8KLL4XjiwkGpf6Vkv2s5oKLt1tnKH0e3"
+                    alt="Sydney headquarters location"
                   />
-                  <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
                 </div>
               </div>
             </div>
+
             <div className="lg:col-span-7">
               <div className="glass-card luminous-border p-12 rounded-xl">
                 <form className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="font-label-caps text-label-caps text-outline uppercase">
-                        Full Name
-                      </label>
-                      <input
-                        className="w-full bg-surface-container border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-on-surface-variant/40"
-                        placeholder="Julian Montgomery"
-                        type="text"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="font-label-caps text-label-caps text-outline uppercase">
-                        Email Address
-                      </label>
-                      <input
-                        className="w-full bg-surface-container border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-on-surface-variant/40"
-                        placeholder="julian@example.com"
-                        type="email"
-                      />
-                    </div>
+                    <FormField label="Full Name" type="text" placeholder="Julian Montgomery" />
+                    <FormField label="Email Address" type="email" placeholder="julian@example.com" />
                   </div>
                   <div className="space-y-2">
                     <label className="font-label-caps text-label-caps text-outline uppercase">
@@ -96,7 +91,7 @@ export default function ContactPage() {
                       className="w-full bg-surface-container border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-on-surface-variant/40 resize-none"
                       placeholder="How may we assist in your financial stewardship?"
                       rows={4}
-                    ></textarea>
+                    />
                   </div>
                   <Button
                     className="w-full md:w-auto font-body-md font-semibold"
@@ -113,38 +108,37 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Contact channels */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card luminous-border p-8 rounded-xl flex items-center gap-6 group hover:bg-surface-container-lowest transition-colors duration-300">
-              <div className="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-headline-md text-primary mb-1">
-                  Direct Inquiry
-                </h3>
-                <p className="font-body-md text-outline">
-                  +61 (2) 5550 1200
-                </p>
-              </div>
-            </div>
-            <div className="glass-card luminous-border p-8 rounded-xl flex items-center gap-6 group hover:bg-surface-container-lowest transition-colors duration-300">
-              <div className="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
-                <Megaphone className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-headline-md text-primary mb-1">
-                  Press &amp; Media
-                </h3>
-                <p className="font-body-md text-outline">
-                  press@rvgwealth.com
-                </p>
-              </div>
-            </div>
+            {contactChannels.map((c) => (
+              <ContactInfoCard key={c.title} {...c} />
+            ))}
           </div>
         </section>
       </main>
       <SiteFooter variant="compact" />
+    </div>
+  );
+}
+
+function FormField({
+  label,
+  type,
+  placeholder,
+}: {
+  label: string;
+  type: string;
+  placeholder: string;
+}) {
+  return (
+    <div className="space-y-2">
+      <label className="font-label-caps text-label-caps text-outline uppercase">{label}</label>
+      <input
+        className="w-full bg-surface-container border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-on-surface-variant/40"
+        placeholder={placeholder}
+        type={type}
+      />
     </div>
   );
 }
