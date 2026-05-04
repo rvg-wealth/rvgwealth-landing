@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #fbf9f2;
+  --color-surface: #e8e3d5;
   --color-secondary-container: #fed65b;
   --color-on-primary: #ffffff;
   --color-inverse-surface: #30312c;
@@ -19,9 +19,9 @@
   --color-primary-fixed-dim: #b6ccb7;
   --color-on-secondary: #ffffff;
   --color-inverse-on-surface: #f2f1ea;
-  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-lowest: #f2ede0;
   --color-tertiary-container: #55642b;
-  --color-surface-container-low: #f5f4ed;
+  --color-surface-container-low: #dfdad0;
   --color-on-tertiary-fixed-variant: #3e4c16;
   --color-secondary-fixed-dim: #e9c349;
   --color-inverse-primary: #b6ccb7;
@@ -30,20 +30,20 @@
   --color-on-secondary-fixed-variant: #574500;
   --color-on-surface: #1b1c18;
   --color-on-tertiary-container: #cfe09a;
-  --color-surface-bright: #fbf9f2;
+  --color-surface-bright: #ede9df;
   --color-tertiary-fixed-dim: #bdce89;
   --color-on-secondary-container: #745c00;
   --color-on-tertiary-fixed: #161f00;
   --color-on-secondary-fixed: #241a00;
   --color-secondary-fixed: #ffe088;
-  --color-surface-container-high: #e9e8e1;
-  --color-surface-variant: #e3e3dc;
+  --color-surface-container-high: #d0cbc1;
+  --color-surface-variant: #cdc8be;
   --color-on-error-container: #93000a;
   --color-on-background: #1b1c18;
-  --color-surface-container-highest: #e3e3dc;
-  --color-surface-dim: #dbdad4;
+  --color-surface-container-highest: #c8c3b9;
+  --color-surface-dim: #c0bbb1;
   --color-tertiary: #3e4c16;
-  --color-background: #fbf9f2;
+  --color-background: #e8e3d5;
   --color-outline-variant: #c3c8c0;
   --color-error-container: #ffdad6;
   --color-surface-container: #efeee7;
@@ -170,25 +170,25 @@ textarea {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(242, 237, 224, 0.9);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(79, 99, 82, 0.22);
-  box-shadow: 0 20px 40px rgba(79, 99, 82, 0.08);
+  border: 1px solid rgba(56, 75, 59, 0.14);
+  box-shadow: 0 8px 24px rgba(56, 75, 59, 0.08);
 }
 
 .glass-surface {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(242, 237, 224, 0.9);
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(79, 99, 82, 0.22);
-  box-shadow: 0 4px 30px rgba(79, 99, 82, 0.08);
+  border: 1px solid rgba(56, 75, 59, 0.14);
+  box-shadow: 0 4px 16px rgba(56, 75, 59, 0.07);
 }
 
 .rim-light {
-  border-top: 1px solid rgba(79, 99, 82, 0.25);
+  border-top: 1px solid rgba(56, 75, 59, 0.18);
 }
 
 .luminous-border {
-  border: 1px solid rgba(79, 99, 82, 0.25);
+  border: 1px solid rgba(56, 75, 59, 0.18);
 }
 
 .gold-accent {
@@ -198,7 +198,7 @@ textarea {
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at 70% 30%, #f0f4f1 0%, #fbf9f2 100%);
+  background: radial-gradient(circle at 70% 30%, #dce6dd 0%, #e8e3d5 100%);
 }
 
 .no-scrollbar::-webkit-scrollbar {

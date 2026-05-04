@@ -43,7 +43,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 relative">
-              <div className="glass-card rounded-2xl p-4 overflow-hidden relative z-10">
+              <div className="rounded-2xl p-3 overflow-hidden border border-outline-variant/30 bg-surface-container-lowest shadow-[0_12px_40px_rgba(56,75,59,0.1)]">
                 <img
                   alt="Financial Visualization"
                   className="rounded-xl w-full h-[400px] object-cover"
@@ -51,13 +51,12 @@ export default function Home() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG6a627--3UfUrlDx4JivaoP26DFHOc5Sm_ZdniR9kxDnwhXaE0ibhtniy77XGZLFlboL-r-5qDkAtG4VMBvGv7Ia_HxdJsXl8iruuVvmBrutxblbAnsKVZWn4IzyQd_q1VkjRJ6HIl9N88djCqApNuzuDuwwsxtjTPc_3ZpNN3PHVd4-23ooq10FXULHYSf8ReZQkpS0-n6mqFJ54KxEzsJY9gFv8uoLPhBQZpJXxt_yzak6dGfXdnROqgymKMeL3HIpUBELyIkNJ"
                 />
               </div>
-              <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed rounded-full blur-[80px] opacity-40"></div>
             </div>
           </div>
         </section>
-        <section className="py-16 bg-surface-container-low">
+        <section className="py-16 bg-surface-container-high">
           <div className="max-w-7xl mx-auto px-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-y border-emerald-200/60 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-y border-outline-variant/40 py-12">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary">
                   <BarChart3 className="w-5 h-5" />
@@ -85,16 +84,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-stack-lg px-12 bg-surface">
+        <section className="py-stack-lg px-12 bg-surface-container-low">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
               <div className="max-w-2xl">
                 <h2 className="font-display-xl text-headline-lg text-primary mb-4">
-                  Mastery Across Every Asset Class
+                  Expertise Across Every Asset Class
                 </h2>
                 <p className="text-body-lg font-body-lg text-on-surface-variant">
-                  We provide a holistic ecosystem for wealth preservation, ensuring
-                  your portfolio is as resilient as it is diversified.
+                  A comprehensive approach to wealth preservation — your portfolio
+                  built for resilience, diversification, and generational continuity.
                 </p>
               </div>
                 <button className="text-primary font-label-caps flex items-center gap-2 group">
@@ -103,7 +102,7 @@ export default function Home() {
                 </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-[600px]">
-              <div className="md:col-span-8 glass-card rounded-3xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer">
+              <div className="md:col-span-8 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer">
                 <img
                   alt="Investment Planning"
                   className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
@@ -123,9 +122,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col">
+              <div className="md:col-span-4 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 flex flex-col">
                 <div className="mb-auto">
-                  <div className="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center text-tertiary-fixed-dim mb-8">
+                  <div className="w-14 h-14 bg-tertiary-fixed rounded-xl flex items-center justify-center text-tertiary mb-8">
                     <Building2 className="w-7 h-7" />
                   </div>
                   <h3 className="font-headline-lg text-primary mb-4">
@@ -140,9 +139,9 @@ export default function Home() {
                   Details <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="md:col-span-4 glass-card rounded-3xl p-10 flex flex-col">
+              <div className="md:col-span-4 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 flex flex-col">
                 <div className="mb-auto">
-                  <div className="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center text-primary mb-8">
+                  <div className="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-8">
                     <Leaf className="w-7 h-7" />
                   </div>
                   <h3 className="font-headline-lg text-primary mb-4">Retirement</h3>
@@ -155,7 +154,7 @@ export default function Home() {
                   Details <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="md:col-span-8 glass-card rounded-3xl p-10 flex items-center justify-between">
+              <div className="md:col-span-8 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 flex items-center justify-between">
                 <div className="max-w-sm">
                   <h3 className="font-headline-lg text-primary mb-2">
                     Education Funds
@@ -188,71 +187,69 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-stack-lg bg-surface-container-low overflow-hidden">
+        <section className="py-stack-lg bg-surface-container">
           <div className="max-w-7xl mx-auto px-12">
-            <div className="text-center mb-16">
+            <div className="mb-16">
               <span className="font-label-caps text-secondary mb-4 block">
-                Testimonials
+                Client Perspectives
               </span>
-              <h2 className="font-display-xl text-display-xl text-primary">
-                Voices of Stewardship
+              <h2 className="font-headline-lg text-headline-lg text-primary">
+                What Our Clients Say
               </h2>
             </div>
-            <div className="relative flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
-              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-surface-container-lowest border border-outline-variant/40 p-10 rounded-2xl flex flex-col">
                 <div className="flex gap-1 text-secondary mb-6">
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
                 </div>
-                <p className="font-headline-md text-primary mb-8 leading-relaxed">
+                <p className="text-body-lg text-on-surface mb-8 leading-relaxed flex-1">
                   "The level of personalized attention and strategic foresight at RVG
-                  is unparalleled. They didn't just manage my portfolio; they
+                  is unparalleled. They didn't just manage my portfolio — they
                   understood my legacy."
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-slate-200">
+                <div className="flex items-center gap-4 pt-6 border-t border-outline-variant/30">
+                  <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
                     <img
-                      alt="Client"
-                      className="w-full h-full object-cover rounded-full"
-                      data-alt="A high-end portrait of a senior business executive in a classic charcoal wool suit against a minimalist light ivory background. The lighting is soft and flattering, emphasizing a mood of calm authority and success. The color palette is restricted to elegant neutral tones with soft sage accents in the background environment."
+                      alt="Julian Thorne"
+                      className="w-full h-full object-cover"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsMlFkoKLalRovD2siIGveuoW5i6Ck1RNy3TK8uG4mSPt07_0rpDjr_cSPh5HjjkZKFbUEXmo2HcF6vazyN2ZMnJ6-jjNrHHv05YDxe2FwarBcUwETg0S53vnFW8TYVtC79uIGIEuzjxBsXqaf25gxraBo_OP5YlebOTcsWqeePT1nlmb5GO4hN4ehAj7yn728g-38wt8USeiMYv4VnCaz3cyIU6P8SDsMflHQPByMFoD57_KD8aNtDXmDdyiTGhxX_LDm2_MPbki"
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-primary">Julian Thorne</h4>
+                    <h4 className="font-semibold text-primary text-sm">Julian Thorne</h4>
                     <p className="text-sm text-on-surface-variant">
                       CEO, Heritage Logistics
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="min-w-[450px] snap-center glass-card p-12 rounded-3xl">
+              <div className="bg-surface-container-lowest border border-outline-variant/40 p-10 rounded-2xl flex flex-col">
                 <div className="flex gap-1 text-secondary mb-6">
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
-                  <Star className="w-5 h-5 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-secondary text-secondary" />
                 </div>
-                <p className="font-headline-md text-primary mb-8 leading-relaxed">
+                <p className="text-body-lg text-on-surface mb-8 leading-relaxed flex-1">
                   "Their transparency in real estate development has been a breath
-                  of fresh air. I finally feel like a partner in my own wealth
-                  journey."
+                  of fresh air. I finally feel like a genuine partner in my own
+                  wealth journey."
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-slate-200">
+                <div className="flex items-center gap-4 pt-6 border-t border-outline-variant/30">
+                  <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
                     <img
-                      alt="Client"
-                      className="w-full h-full object-cover rounded-full"
-                      data-alt="A professional portrait of a successful female entrepreneur in a minimalist white business studio. She wears a tailored linen blazer in a soft sage color. The lighting is airy and bright, emphasizing a light-mode aesthetic that is clean, premium, and sophisticated. The background is a soft ivory-tinted wall with subtle shadows."
+                      alt="Eleanor Vance"
+                      className="w-full h-full object-cover"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu50XlJ9m_H-_tPmpo1lgqlvLgzAUw9_j0u7vEGktZfQN8ZP1z19b2PZgGtHjoFUyHNdP9CQpvIXEE-djnBnGQztHrdybZUfVUWrblJVJGIhXzeef5l8EP4Nr3hSiFaF2wBaVvCFw--_HuDRpNKA1ssm0hhlzOsjNqVnFSNqLDjBfRrDgh3vr4ry3QIRLl4VZbNNenlGEwa-VCApZH8TgGHyZ41V_8y2lzy8IKHstYLfE6VofkxAsFfS0XC_Sw5e4TThSYwzky4_-X"
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-primary">Eleanor Vance</h4>
+                    <h4 className="font-semibold text-primary text-sm">Eleanor Vance</h4>
                     <p className="text-sm text-on-surface-variant">
                       Founder, Vance Interiors
                     </p>
@@ -264,10 +261,7 @@ export default function Home() {
         </section>
         <section className="py-stack-lg px-12">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-primary rounded-[40px] p-24 relative overflow-hidden flex flex-col items-center text-center">
-              <div className="absolute inset-0 opacity-10 pointer-events-none">
-                <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,#b6ccb7_0%,transparent_50%)]"></div>
-              </div>
+            <div className="bg-primary rounded-2xl p-20 flex flex-col items-center text-center">
               <span className="font-label-caps text-tertiary-fixed mb-6 tracking-[0.3em]">
                 Next Steps
               </span>

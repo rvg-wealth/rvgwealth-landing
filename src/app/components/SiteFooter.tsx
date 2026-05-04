@@ -31,7 +31,7 @@ const links = {
 export function SiteFooter({ variant = "full" }: SiteFooterProps) {
   if (variant === "compact") {
     return (
-      <footer className="w-full border-t border-emerald-200/60 bg-stone-50">
+      <footer className="w-full border-t border-outline-variant/50 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-headline-lg font-bold text-primary">
             RVG Wealth Management
@@ -40,26 +40,26 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
             {links.legal.map((item) => (
               <a
                 key={item.label}
-                className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity duration-200"
+                className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-primary underline-offset-4 hover:underline transition-opacity duration-200"
                 href={item.href}
               >
                 {item.label}
               </a>
             ))}
             <a
-              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity duration-200"
+              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-primary underline-offset-4 hover:underline transition-opacity duration-200"
               href="#"
             >
               Terms of Service
             </a>
             <a
-              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity duration-200"
+              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-primary underline-offset-4 hover:underline transition-opacity duration-200"
               href="#"
             >
               Regulatory Disclosure
             </a>
             <a
-              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity duration-200"
+              className="font-serif text-sm tracking-wide text-[#4F6352]/70 hover:text-primary underline-offset-4 hover:underline transition-opacity duration-200"
               href="#"
             >
               Sitemap
@@ -74,7 +74,7 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
   }
 
   return (
-    <footer className="w-full border-t border-emerald-200/60 bg-stone-50 py-24">
+    <footer className="w-full border-t border-outline-variant/50 bg-surface-container-low py-24">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12">
         <div>
           <div className="text-xl font-bold tracking-widest text-[#4F6352] mb-4 font-headline-lg uppercase">
@@ -101,7 +101,7 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
             {links.expertise.map((item) => (
               <li key={item.label}>
                 <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
+                  className="text-[#4F6352]/70 text-sm font-serif hover:text-primary underline-offset-4 hover:underline"
                   href={item.href}
                 >
                   {item.label}
@@ -118,7 +118,7 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
             {links.resources.map((item) => (
               <li key={item.label}>
                 <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
+                  className="text-[#4F6352]/70 text-sm font-serif hover:text-primary underline-offset-4 hover:underline"
                   href={item.href}
                 >
                   {item.label}
@@ -144,7 +144,7 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-12 mt-24 pt-8 border-t border-emerald-200/40 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-12 mt-24 pt-8 border-t border-outline-variant/40 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-[#4F6352]/70 font-serif text-sm leading-relaxed">
           © 2024 RVG Wealth Management. Expert guidance for modern stewardship.
         </p>
@@ -152,7 +152,7 @@ export function SiteFooter({ variant = "full" }: SiteFooterProps) {
           {links.company.map((item) => (
             <a
               key={item.label}
-              className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700"
+              className="text-[#4F6352]/70 text-sm font-serif hover:text-primary"
               href={item.href}
             >
               {item.label}

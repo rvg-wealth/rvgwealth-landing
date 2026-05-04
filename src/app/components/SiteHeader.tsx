@@ -13,7 +13,7 @@ const navItems = [
 
 export function SiteHeader({ activeHref = "/" }: SiteHeaderProps) {
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-emerald-200/60 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
+    <nav className="fixed top-0 w-full z-50 border-b border-outline-variant/50 bg-surface-container-lowest/90 backdrop-blur-3xl shadow-[0_4px_20px_rgba(56,75,59,0.08)]">
       <div className="flex justify-between items-center max-w-screen-2xl mx-auto px-12 py-6">
         <a
           className="text-2xl font-bold tracking-[0.2em] text-[#4F6352] font-headline-lg"
