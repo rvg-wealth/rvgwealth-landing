@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-surface-container-high">
+        <section className="py-16 bg-surface-container-high hidden">
           <div className="max-w-7xl mx-auto px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-y border-outline-variant/40 py-12">
               <div className="flex items-center gap-5">
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-stack-lg px-12 bg-surface-container-low">
+        <section className="py-stack-lg px-12 bg-surface-container-lowest/90">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
               <div className="max-w-2xl">
@@ -101,8 +101,8 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-[600px]">
-              <div className="md:col-span-8 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+              <div className="md:col-span-8 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer min-h-[340px]">
                 <img
                   alt="Investment Planning"
                   className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
@@ -187,7 +187,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-stack-lg bg-surface-container">
+        <section className="py-stack-lg hero-gradient">
           <div className="max-w-7xl mx-auto px-12">
             <div className="mb-16">
               <span className="font-label-caps text-secondary mb-4 block">

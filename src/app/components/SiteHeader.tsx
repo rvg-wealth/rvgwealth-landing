@@ -40,7 +40,7 @@ export function SiteHeader({ activeHref = "/" }: SiteHeaderProps) {
             );
           })}
         </div>
-        <Button caps>Book a Consultation</Button>
+        <a href="/contact"><Button caps>Book a Consultation</Button></a>
       </div>
     </nav>
   );
