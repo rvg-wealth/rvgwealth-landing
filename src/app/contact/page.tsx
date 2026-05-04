@@ -1,4 +1,6 @@
 import { ArrowRight, ChevronDown, MapPin, Megaphone, Phone } from "lucide-react";
+import { Button } from "../components/Button";
+import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export default function ContactPage() {
@@ -93,13 +95,15 @@ export default function ContactPage() {
                       rows={4}
                     ></textarea>
                   </div>
-                  <button
-                    className="w-full md:w-auto px-12 py-4 bg-primary-container text-on-primary-container rounded-lg font-body-md font-semibold hover:shadow-[0_8px_30px_rgba(79,99,82,0.2)] transition-all duration-300 flex items-center justify-center gap-2"
+                  <Button
+                    className="w-full md:w-auto font-body-md font-semibold"
+                    size="lg"
                     type="submit"
+                    variant="primaryContainer"
                   >
                     Request Private Consultation
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Button>
                 </form>
               </div>
             </div>
@@ -136,42 +140,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-stone-200 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-serif font-bold text-stone-900">
-            RVG Wealth Management
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Privacy Policy
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Terms of Service
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Regulatory Disclosure
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Sitemap
-            </a>
-          </div>
-          <div className="font-serif text-sm tracking-wide text-stone-600 text-center md:text-right">
-            © 2024 RVG Wealth Management. Members of the Financial District Guild.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter variant="compact" />
     </div>
   );
 }

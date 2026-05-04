@@ -1,3 +1,5 @@
+import { Button } from "./Button";
+
 type SiteHeaderProps = {
   activeHref?: string;
 };
@@ -12,7 +14,7 @@ const navItems = [
 
 export function SiteHeader({ activeHref = "/" }: SiteHeaderProps) {
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-emerald-100/20 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
+    <nav className="fixed top-0 w-full z-50 border-b border-emerald-200/60 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
       <div className="flex justify-between items-center max-w-screen-2xl mx-auto px-12 py-8">
         <a
           className="text-2xl font-bold tracking-[0.2em] text-[#4F6352] font-headline-lg"
@@ -39,9 +41,7 @@ export function SiteHeader({ activeHref = "/" }: SiteHeaderProps) {
             );
           })}
         </div>
-        <button className="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-caps uppercase transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          Book a Consultation
-        </button>
+        <Button caps>Book a Consultation</Button>
       </div>
     </nav>
   );

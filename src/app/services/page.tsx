@@ -6,6 +6,7 @@ import {
   Leaf,
   Wallet,
 } from "lucide-react";
+import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export default function ServicesPage() {
@@ -204,112 +205,7 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      <footer className="w-full border-t border-emerald-100/30 bg-stone-50">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12 py-24">
-          <div>
-            <div className="text-xl font-bold tracking-widest text-[#4F6352] mb-4 font-headline-md uppercase">
-              RVG Wealth
-            </div>
-            <p className="font-serif text-sm leading-relaxed text-[#4F6352]/70">
-              Expert guidance for modern stewardship. Protecting legacies
-              through generations of market cycles.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Investment Planning
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Retirement Planning
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Education Planning
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Real Estate Advisory
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="/membership"
-                >
-                  Membership
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="/education"
-                >
-                  Education
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="/contact"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label-caps text-primary mb-6">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-serif text-sm text-[#4F6352]/70 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity"
-                  href="#"
-                >
-                  Legal Disclosures
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-12 pb-12 border-t border-emerald-100/10 pt-8">
-          <p className="font-serif text-xs text-[#4F6352]/40 text-center uppercase tracking-widest">
-            © 2024 RVG Wealth Management. Expert guidance for modern
-            stewardship.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

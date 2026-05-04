@@ -7,11 +7,12 @@ import {
   Globe,
   Leaf,
   Mail,
-  Share2,
   ShieldCheck,
   Star,
 } from "lucide-react";
 import { SiteHeader } from "./components/SiteHeader";
+import { SiteFooter } from "./components/SiteFooter";
+import { Button } from "./components/Button";
 
 export default function Home() {
   return (
@@ -32,9 +33,9 @@ export default function Home() {
                 your generational aspirations.
               </p>
               <div className="flex items-center gap-6">
-                <button className="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-label-caps transition-all duration-300 hover:shadow-[0_10px_30px_rgba(79,99,82,0.2)]">
+                <Button variant="primaryContainer" size="lg" caps>
                   Explore Our Services
-                </button>
+                </Button>
                 <button className="flex items-center gap-2 font-label-caps text-primary group">
                   Our Philosophy
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -315,140 +316,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-emerald-100/30 bg-stone-50 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12">
-          <div>
-            <div className="text-xl font-bold tracking-widest text-[#4F6352] mb-4 font-headline-lg">
-              RVG Wealth
-            </div>
-            <p className="text-[#4F6352]/70 font-serif text-sm leading-relaxed mb-6">
-              Redefining wealth management through the lens of modern stewardship
-              and timeless expertise.
-            </p>
-            <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full border border-[#4F6352]/20 flex items-center justify-center text-[#4F6352] hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer">
-                <Share2 className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 rounded-full border border-[#4F6352]/20 flex items-center justify-center text-[#4F6352] hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer">
-                <Mail className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <h4 className="font-bold text-[#4F6352] mb-6 font-label-caps">
-              Expertise
-            </h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Investment Planning
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Tax Strategy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Philanthropy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Real Estate Portfolio
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-[#4F6352] mb-6 font-label-caps">
-              Resources
-            </h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Education Center
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Quarterly Reports
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Membership Benefits
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700 underline-offset-4 hover:underline"
-                  href="#"
-                >
-                  Private Portal
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-[#4F6352] mb-6 font-label-caps">
-              Global Presence
-            </h4>
-            <p className="text-[#4F6352]/70 text-sm font-serif leading-loose">
-              1200 Avenue of the Americas
-              <br />
-              Suite 450, New York, NY 10036
-              <br />
-              +1 (212) 555-0198
-            </p>
-            <div className="mt-6 flex items-center gap-2 text-primary font-bold">
-              <Globe className="w-4 h-4" />
-              <span className="text-sm">English / Switzerland / UAE</span>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-12 mt-24 pt-8 border-t border-emerald-100/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[#4F6352]/70 font-serif text-sm leading-relaxed">
-            © 2024 RVG Wealth Management. Expert guidance for modern stewardship.
-          </p>
-          <div className="flex gap-8">
-            <a
-              className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700"
-              href="#"
-            >
-              Privacy Policy
-            </a>
-            <a
-              className="text-[#4F6352]/70 text-sm font-serif hover:text-emerald-700"
-              href="#"
-            >
-              Legal Disclosures
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
