@@ -1,50 +1,10 @@
 import { ArrowRight, Award, BarChart2, ChevronRight, Clock, Globe, Mail, Search, Shield } from "lucide-react";
+import { SiteHeader } from "../components/SiteHeader";
 
 export default function EducationPage() {
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-fixed">
-      <nav className="fixed top-0 w-full z-50 border-b border-emerald-100/20 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
-        <div className="flex justify-between items-center max-w-screen-2xl mx-auto px-12 py-8">
-          <span className="text-2xl font-bold tracking-[0.2em] text-[#4F6352] font-headline-lg uppercase">
-            RVG Wealth
-          </span>
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              className="text-[#4F6352]/60 font-serif tracking-tight text-sm uppercase font-medium hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="text-[#4F6352]/60 font-serif tracking-tight text-sm uppercase font-medium hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/services"
-            >
-              Services
-            </a>
-            <a
-              className="text-[#4F6352]/60 font-serif tracking-tight text-sm uppercase font-medium hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/membership"
-            >
-              Membership
-            </a>
-            <a
-              className="text-[#4F6352] border-b border-[#4F6352] pb-1 font-serif tracking-tight text-sm uppercase font-medium"
-              href="/education"
-            >
-              Education
-            </a>
-            <a
-              className="text-[#4F6352]/60 font-serif tracking-tight text-sm uppercase font-medium hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-          <button className="bg-primary-container text-on-primary px-6 py-3 rounded-lg text-label-caps uppercase tracking-widest hover:shadow-lg transition-all active:scale-95 duration-200 ease-out">
-            Book a Consultation
-          </button>
-        </div>
-      </nav>
+      <SiteHeader activeHref="/education" />
       <main className="pt-32 pb-24">
         <section className="max-w-7xl mx-auto px-12 mb-stack-lg">
           <div className="relative overflow-hidden rounded-xl h-[500px] flex items-center group">

@@ -1,50 +1,10 @@
 import { ArrowRight, ChevronDown, MapPin, Megaphone, Phone } from "lucide-react";
+import { SiteHeader } from "../components/SiteHeader";
 
 export default function ContactPage() {
   return (
     <div className="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-      <nav className="fixed top-0 w-full z-50 border-b border-stone-200/30 bg-white/85 backdrop-blur-2xl shadow-[0_4px_30px_rgba(79,99,82,0.08)]">
-        <div className="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
-          <div className="text-2xl font-serif font-bold tracking-tighter text-[#4F6352]">
-            RVG Wealth
-          </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/services"
-            >
-              Services
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/education"
-            >
-              Education
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/membership"
-            >
-              Membership
-            </a>
-            <a
-              className="font-body-md text-[#4F6352] border-b border-[#4F6352] pb-1 font-semibold"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-          <button className="font-body-md px-6 py-2 bg-primary-container text-on-primary-container rounded-full hover:scale-105 transition-all duration-300">
-            Book a Consultation
-          </button>
-        </div>
-      </nav>
+      <SiteHeader activeHref="/contact" />
       <main className="pt-32">
         <header className="max-w-7xl mx-auto px-8 py-24 text-center">
           <h1 className="font-display-xl text-display-xl text-primary mb-6">

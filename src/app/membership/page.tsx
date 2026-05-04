@@ -1,50 +1,10 @@
 import { CheckCircle, ChevronDown, ShieldCheck, Star, Users } from "lucide-react";
+import { SiteHeader } from "../components/SiteHeader";
 
 export default function MembershipPage() {
   return (
     <div className="bg-surface text-on-surface font-body-md">
-      <nav className="fixed top-0 w-full z-50 border-b border-emerald-100/20 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
-        <div className="flex justify-between items-center max-w-screen-2xl mx-auto px-12 py-8">
-          <div className="text-2xl font-bold tracking-[0.2em] text-[#4F6352] font-headline-lg">
-            RVG WEALTH
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] transition-all duration-500"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] transition-all duration-500"
-              href="/services"
-            >
-              Services
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352] border-b border-[#4F6352] pb-1"
-              href="/membership"
-            >
-              Membership
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] transition-all duration-500"
-              href="/education"
-            >
-              Education
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] transition-all duration-500"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-          <button className="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-serif text-sm uppercase tracking-wider hover:opacity-90 transition-all duration-200">
-            Book a Consultation
-          </button>
-        </div>
-      </nav>
+      <SiteHeader activeHref="/membership" />
       <main className="pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <header className="text-center mb-24">
           <span className="font-label-caps text-secondary uppercase tracking-[0.3em] mb-4 block">

@@ -11,52 +11,12 @@ import {
   ShieldCheck,
   Star,
 } from "lucide-react";
+import { SiteHeader } from "./components/SiteHeader";
 
 export default function Home() {
   return (
     <div className="bg-background text-on-surface">
-      <nav className="fixed top-0 w-full z-50 border-b border-emerald-100/20 bg-white/85 backdrop-blur-3xl shadow-[0_20px_40px_rgba(79,99,82,0.08)]">
-        <div className="flex justify-between items-center max-w-screen-2xl mx-auto px-12 py-8">
-          <div className="text-2xl font-bold tracking-[0.2em] text-[#4F6352] font-headline-lg">
-            RVG Wealth
-          </div>
-          <div className="hidden md:flex space-x-10">
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352] border-b border-[#4F6352] pb-1 hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/services"
-            >
-              Services
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/membership"
-            >
-              Membership
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/education"
-            >
-              Education
-            </a>
-            <a
-              className="font-serif tracking-tight text-sm uppercase font-medium text-[#4F6352]/60 hover:text-[#4F6352] hover:opacity-100 transition-all duration-500"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-          <button className="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-caps uppercase transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            Book a Consultation
-          </button>
-        </div>
-      </nav>
+      <SiteHeader activeHref="/" />
       <main>
         <section className="hero-gradient pt-48 pb-32 px-12 overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">

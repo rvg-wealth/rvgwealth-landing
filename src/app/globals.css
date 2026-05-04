@@ -106,6 +106,14 @@ body {
   font-family: var(--font-manrope);
 }
 
+a,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 .group[open] .group-open\:rotate-180 {
   transform: rotate(180deg);
 }
