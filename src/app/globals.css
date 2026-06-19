@@ -1,98 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #fbf9f2;
-  --color-secondary-container: #fed65b;
-  --color-on-primary: #ffffff;
-  --color-inverse-surface: #30312c;
-  --color-on-error: #ffffff;
-  --color-primary-fixed: #d2e8d3;
-  --color-surface-tint: #4f6352;
-  --color-primary-container: #4f6352;
-  --color-on-tertiary: #ffffff;
-  --color-secondary: #735c00;
-  --color-on-surface-variant: #434843;
-  --color-error: #ba1a1a;
-  --color-primary: #384b3b;
-  --color-on-primary-fixed-variant: #384b3b;
-  --color-on-primary-fixed: #0d1f12;
-  --color-primary-fixed-dim: #b6ccb7;
-  --color-on-secondary: #ffffff;
-  --color-inverse-on-surface: #f2f1ea;
-  --color-surface-container-lowest: #ffffff;
-  --color-tertiary-container: #55642b;
-  --color-surface-container-low: #f5f4ed;
-  --color-on-tertiary-fixed-variant: #3e4c16;
-  --color-secondary-fixed-dim: #e9c349;
-  --color-inverse-primary: #b6ccb7;
-  --color-on-primary-container: #c8dec9;
-  --color-outline: #737872;
-  --color-on-secondary-fixed-variant: #574500;
-  --color-on-surface: #1b1c18;
-  --color-on-tertiary-container: #cfe09a;
-  --color-surface-bright: #fbf9f2;
-  --color-tertiary-fixed-dim: #bdce89;
-  --color-on-secondary-container: #745c00;
-  --color-on-tertiary-fixed: #161f00;
-  --color-on-secondary-fixed: #241a00;
-  --color-secondary-fixed: #ffe088;
-  --color-surface-container-high: #e9e8e1;
-  --color-surface-variant: #e3e3dc;
-  --color-on-error-container: #93000a;
-  --color-on-background: #1b1c18;
-  --color-surface-container-highest: #e3e3dc;
-  --color-surface-dim: #dbdad4;
-  --color-tertiary: #3e4c16;
-  --color-background: #fbf9f2;
-  --color-outline-variant: #c3c8c0;
-  --color-error-container: #ffdad6;
-  --color-surface-container: #efeee7;
-  --color-tertiary-fixed: #d9eaa3;
+  /* Color system */
+  --color-ink: #15231c;
+  --color-slate: #5a6470;
+  --color-mist: #f7f8f7;
+  --color-hairline: #e8ebe9;
+  --color-gold: #b98a2e;
+  --color-evergreen: #1f6f5c;
+  --color-background: #ffffff;
 
-  --font-body-lg: var(--font-manrope);
-  --font-body-md: var(--font-manrope);
-  --font-label-caps: var(--font-manrope);
-  --font-headline-lg: var(--font-noto-serif);
-  --font-headline-md: var(--font-noto-serif);
-  --font-display-xl: var(--font-noto-serif);
+  /* Type */
   --font-sans: var(--font-manrope);
-  --font-serif: var(--font-noto-serif);
 
-  --text-body-lg: 18px;
-  --text-body-lg--line-height: 1.6;
-  --text-body-lg--font-weight: 400;
-  --text-headline-lg: 32px;
-  --text-headline-lg--line-height: 1.2;
-  --text-headline-lg--letter-spacing: -0.01em;
-  --text-headline-lg--font-weight: 500;
-  --text-body-md: 16px;
-  --text-body-md--line-height: 1.5;
-  --text-body-md--font-weight: 400;
-  --text-display-xl: 48px;
-  --text-display-xl--line-height: 1.1;
-  --text-display-xl--letter-spacing: -0.02em;
-  --text-display-xl--font-weight: 600;
-  --text-headline-md: 24px;
-  --text-headline-md--line-height: 1.3;
-  --text-headline-md--font-weight: 500;
-  --text-label-caps: 12px;
-  --text-label-caps--line-height: 1;
-  --text-label-caps--letter-spacing: 0.08em;
-  --text-label-caps--font-weight: 600;
-
-  --spacing-container-max: 1280px;
-  --spacing-stack-sm: 12px;
-  --spacing-stack-md: 24px;
-  --spacing-stack-lg: 48px;
-  --spacing-margin-mobile: 16px;
-  --spacing-gutter: 24px;
-  --spacing-unit: 8px;
-  --spacing-margin-desktop: 64px;
-
-  --radius: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-2xl: 1rem;
   --radius-full: 9999px;
+
+  /* Layout */
+  --spacing-container: 1200px;
 }
 
 html,
@@ -102,101 +30,59 @@ body {
 
 body {
   background: var(--color-background);
-  color: var(--color-on-surface);
-  font-family: var(--font-manrope);
+  color: var(--color-ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.group[open] .group-open\:rotate-180 {
-  transform: rotate(180deg);
+/* ---- Type scale (Manrope only) ---- */
+.text-display {
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
-.font-body-lg,
-.font-body-md,
-.font-label-caps {
-  font-family: var(--font-manrope);
+.text-h2 {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 700;
 }
 
-.font-headline-lg,
-.font-headline-md,
-.font-display-xl {
-  font-family: var(--font-noto-serif);
+.text-h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
 }
 
-.text-body-lg {
-  font-size: 18px;
+.text-body {
+  font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
 }
 
-.text-body-md {
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.text-headline-lg {
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  font-weight: 500;
-}
-
-.text-headline-md {
-  font-size: 24px;
-  line-height: 1.3;
-  font-weight: 500;
-}
-
-.text-display-xl {
-  font-size: 48px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-}
-
-.text-label-caps {
+.text-eyebrow {
   font-size: 12px;
   line-height: 1;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 20px 40px rgba(79, 99, 82, 0.08);
+@media (min-width: 768px) {
+  .text-display {
+    font-size: 56px;
+  }
+  .text-h2 {
+    font-size: 36px;
+  }
 }
 
-.glass-surface {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 30px rgba(79, 99, 82, 0.08);
-}
-
-.rim-light {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.luminous-border {
-  border: 1px solid #e0e5e1;
-}
-
-.gold-accent {
-  background: linear-gradient(135deg, #735c00 0%, #fed65b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-gradient {
-  background: radial-gradient(circle at 70% 30%, #f0f4f1 0%, #fbf9f2 100%);
-}
-
+/* ---- Utilities ---- */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -207,4 +93,8 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.group[open] .group-open\:rotate-180 {
+  transform: rotate(180deg);
 }
