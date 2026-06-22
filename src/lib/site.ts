@@ -1,14 +1,14 @@
 export const siteInfo = {
-  name: "RVG Wealth",
+  name: "RVGWealth",
   tagline:
-    "Redefining wealth management through the lens of modern stewardship and timeless expertise.",
+    "Empowering individuals with the knowledge, strategies, and confidence to build lasting wealth.",
   address: {
-    line1: "1200 Avenue of the Americas",
-    line2: "Suite 450, New York, NY 10036",
-    phone: "+1 (212) 555-0198",
+    line1: "RVGWealth Advisory",
+    line2: "[Office address], [City], India",
+    phone: "+91 00000 00000",
   },
-  regions: "English / Switzerland / UAE",
-  copyright: "© 2024 RVG Wealth Management. Expert guidance for modern stewardship.",
+  regions: "India · Serving NRIs Worldwide",
+  copyright: "© 2026 RVGWealth. Expert guidance for modern stewardship.",
 };
 
 export type FooterColumn = {
@@ -18,19 +18,21 @@ export type FooterColumn = {
 
 export const footerColumns: FooterColumn[] = [
   {
-    heading: "Expertise",
+    heading: "Services",
     links: [
+      { label: "Financial Education", href: "/services" },
       { label: "Investment Planning", href: "/services" },
-      { label: "Tax Strategy", href: "/services" },
-      { label: "Philanthropy", href: "/services" },
-      { label: "Real Estate Portfolio", href: "/services" },
+      { label: "Retirement Consultancy", href: "/services" },
+      { label: "Insurance Planning", href: "/services" },
+      { label: "NRI Services", href: "/services" },
     ],
   },
   {
-    heading: "Resources",
+    heading: "Membership",
     links: [
-      { label: "Membership Benefits", href: "/membership" },
-      { label: "Private Portal", href: "#" },
+      { label: "Foundation", href: "/membership" },
+      { label: "Growth", href: "/membership" },
+      { label: "Apex", href: "/membership" },
     ],
   },
   {
