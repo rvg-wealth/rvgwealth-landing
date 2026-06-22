@@ -17,31 +17,36 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <Section background="white">
+      <Section background="evergreen">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 space-y-8">
             <Eyebrow tone="gold">Bespoke Financial Stewardship</Eyebrow>
-            <h1 className="text-display text-ink leading-tight">
+            <h1 className="text-display text-white leading-tight">
               Secure Your Future.
               <br />
               <span className="text-gold">Build Your Legacy.</span>
             </h1>
-            <p className="text-body text-slate max-w-lg">
+            <p className="text-body text-white/70 max-w-lg">
               Bespoke financial stewardship for individuals who value discretion
               and clarity. We craft personalized strategies that align with
               your generational aspirations.
             </p>
             <div className="flex items-center gap-4">
-              <Button variant="primary">Explore Our Services</Button>
-              <Button variant="ghost">
+              <Button
+                variant="primary"
+                className="bg-gold text-ink hover:bg-gold/90"
+              >
+                Explore Our Services
+              </Button>
+              <Button variant="ghost" className="!text-white">
                 Our Philosophy
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
           </div>
           <div className="md:w-1/2 relative">
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-evergreen rounded-full blur-[80px] opacity-30" />
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-3xl border border-evergreen/30 -z-10" />
+            <div className="absolute -top-12 -right-12 w-64 h-64 bg-gold rounded-full blur-[80px] opacity-25" />
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-3xl border border-gold/30" />
             <div className="rounded-2xl bg-white border border-hairline p-4 overflow-hidden relative z-10 shadow-[0_20px_40px_rgba(21,35,28,0.08)]">
               <img
                 alt="Financial Visualization"
@@ -54,32 +59,10 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Trust band */}
-      <Section background="mist">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="flex items-center gap-5">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-mist text-evergreen">
-              <BarChart3 className="w-5 h-5" />
-            </div>
-            <span className="text-h3 text-ink">Personalized Strategies</span>
-          </div>
-          <div className="flex items-center gap-5">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-mist text-evergreen">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <span className="text-h3 text-ink">Transparent Processes</span>
-          </div>
-          <div className="flex items-center gap-5">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-mist text-evergreen">
-              <BadgeCheck className="w-5 h-5" />
-            </div>
-            <span className="text-h3 text-ink">Proven Results</span>
-          </div>
-        </div>
-      </Section>
+      
 
       {/* Services bento */}
-      <Section background="white">
+      <Section background="white" divider>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div className="max-w-2xl">
             <h2 className="text-h2 text-ink mb-4">
@@ -95,7 +78,7 @@ export default function Home() {
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:h-150 mb-26">
           <Card
             hover
             className="md:col-span-8 p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer"
@@ -182,7 +165,7 @@ export default function Home() {
       </Section>
 
       {/* Testimonials */}
-      <Section background="mist">
+      <Section background="white" divider>
         <div className="text-center mb-16">
           <Eyebrow tone="gold" className="mb-4">
             Testimonials
@@ -250,7 +233,7 @@ export default function Home() {
       </Section>
 
       {/* Pricing CTA */}
-      <Section background="evergreen">
+      <Section background="evergreen" divider>
         <div className="flex flex-col items-center text-center">
           <Eyebrow tone="light" className="mb-6 tracking-[0.3em]">
             Next Steps
