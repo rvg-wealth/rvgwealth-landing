@@ -7,18 +7,18 @@ import { Eyebrow } from "@/components/Eyebrow";
 export default function ContactPage() {
   return (
     <>
-      <Section background="white" className="text-center">
-        <h1 className="text-display text-ink mb-6">
+      <Section background="evergreen" className="text-center">
+        <h1 className="text-display text-white mb-6">
           Begin Your Stewardship Journey.
         </h1>
-        <p className="text-body text-slate max-w-2xl mx-auto">
+        <p className="text-body text-white/70 max-w-2xl mx-auto">
           Connect with our advisory team to discuss your family's financial
           future. Our heritage-focused approach ensures your legacy is preserved
           with the utmost discretion.
         </p>
       </Section>
 
-      <Section background="white">
+      <Section background="white" divider>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 space-y-8">
             <h2 className="text-h2 text-ink">Sydney Headquarters</h2>
@@ -92,7 +92,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section background="white">
+      <Section background="evergreen" divider>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card hover className="p-8 flex items-center gap-6">
             <div className="w-16 h-16 rounded-full bg-evergreen/10 text-evergreen flex items-center justify-center shrink-0">
