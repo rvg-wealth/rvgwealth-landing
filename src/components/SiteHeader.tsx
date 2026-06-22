@@ -1,11 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { navLinks, primaryCta } from "@/lib/nav";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
-import Link from "next/link";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -14,12 +15,26 @@ function isActive(pathname: string, href: string) {
 
 export function SiteHeader() {
   const pathname = usePathname() ?? "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-white/90 backdrop-blur-xl">
+    <header
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? "border-b border-hairline bg-white/90 backdrop-blur-xl"
+          : "border-b border-transparent bg-evergreen"
+      }`}
+    >
       <Container className="flex items-center justify-between py-4">
         <Link href="/" className="shrink-0">
-          <Logo />
+          <Logo variant={scrolled ? "default" : "onDark"} />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -31,8 +46,12 @@ export function SiteHeader() {
                 href={link.href}
                 className={`text-sm transition-colors ${
                   active
-                    ? "border-b-2 border-gold pb-0.5 font-semibold text-ink"
-                    : "text-slate hover:text-ink"
+                    ? `border-b-2 border-gold pb-0.5 font-semibold ${
+                        scrolled ? "text-ink" : "text-white"
+                      }`
+                    : scrolled
+                      ? "text-slate hover:text-ink"
+                      : "text-white/80 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -41,7 +60,12 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <Button href={primaryCta.href} className="hidden sm:inline-flex">
+        <Button
+          href={primaryCta.href}
+          className={`hidden sm:inline-flex ${
+            scrolled ? "" : "bg-gold text-ink hover:bg-gold/90"
+          }`}
+        >
           {primaryCta.label}
         </Button>
       </Container>
