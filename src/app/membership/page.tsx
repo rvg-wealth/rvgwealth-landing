@@ -1,6 +1,5 @@
 import { CheckCircle, ChevronDown, ShieldCheck, Star, Users } from "lucide-react";
 import { Section } from "@/components/Section";
-import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Eyebrow } from "@/components/Eyebrow";
 
@@ -22,7 +21,7 @@ export default function MembershipPage() {
 
       <Section background="mist">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          <Card hover className="p-10 flex flex-col">
+          <div className="group relative flex flex-col rounded-xl border border-hairline border-t-white bg-white/70 p-10 shadow-[0_4px_30px_rgba(21,35,28,0.06)] backdrop-blur-xl transition-transform duration-500 hover:scale-[1.02]">
             <div className="mb-8">
               <Eyebrow tone="muted" className="mb-2">
                 The Base
@@ -57,12 +56,15 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <Button variant="secondary" href="#" className="mt-auto w-full">
+            <a
+              href="#"
+              className="mt-auto w-full rounded-lg border border-ink/15 py-4 text-center text-eyebrow text-ink transition-colors hover:border-ink hover:bg-white"
+            >
               ENROLL IN FOUNDATION
-            </Button>
-          </Card>
+            </a>
+          </div>
 
-          <div className="relative rounded-2xl bg-evergreen text-white p-10 flex flex-col shadow-[0_30px_60px_rgba(21,35,28,0.15)] transition-transform hover:-translate-y-1 duration-500 z-10">
+          <div className="relative z-10 flex flex-col rounded-xl bg-evergreen p-10 text-white shadow-[0_30px_60px_rgba(21,35,28,0.18)] ring-1 ring-gold/30 transition-transform duration-500 hover:scale-[1.03] lg:-my-2">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-ink px-6 py-1 rounded-full text-eyebrow shadow-lg">
               Most Distinguished
             </div>
@@ -104,16 +106,15 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <Button
-              variant="primary"
+            <a
               href="#"
-              className="mt-auto w-full bg-gold text-ink hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+              className="mt-auto w-full rounded-lg bg-gold py-4 text-center text-eyebrow text-ink shadow-[0_4px_15px_rgba(185,138,46,0.3)] transition-opacity hover:opacity-90"
             >
               APPLY FOR SOVEREIGN
-            </Button>
+            </a>
           </div>
 
-          <Card hover className="p-10 flex flex-col">
+          <div className="group relative flex flex-col rounded-xl border border-hairline border-t-white bg-white/70 p-10 shadow-[0_4px_30px_rgba(21,35,28,0.06)] backdrop-blur-xl transition-transform duration-500 hover:scale-[1.02]">
             <div className="mb-8">
               <Eyebrow tone="muted" className="mb-2">
                 The Bridge
@@ -148,10 +149,13 @@ export default function MembershipPage() {
                 </li>
               </ul>
             </div>
-            <Button variant="secondary" href="#" className="mt-auto w-full">
+            <a
+              href="#"
+              className="mt-auto w-full rounded-lg border border-ink/15 py-4 text-center text-eyebrow text-ink transition-colors hover:border-ink hover:bg-white"
+            >
               ENROLL IN LEGACY
-            </Button>
-          </Card>
+            </a>
+          </div>
         </div>
       </Section>
 
