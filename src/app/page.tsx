@@ -1,17 +1,48 @@
 import {
   ArrowRight,
-  BadgeCheck,
-  BarChart3,
-  Building2,
-  ChevronRight,
-  Leaf,
-  ShieldCheck,
+  BookOpen,
+  Check,
+  Lightbulb,
   Star,
+  Target,
+  TrendingUp,
 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Eyebrow } from "@/components/Eyebrow";
+import { flagship, mission, services, tiers } from "@/lib/content";
+
+const journey = [
+  { icon: BookOpen, label: "Knowledge" },
+  { icon: Lightbulb, label: "Clarity" },
+  { icon: Target, label: "Action" },
+  { icon: TrendingUp, label: "Wealth" },
+];
+
+const turningPoints = [
+  "Invest time in financial knowledge",
+  "Make decisions with logic, not emotion",
+  "Evaluate both opportunity and risk",
+  "Follow a structured financial plan",
+];
+
+const testimonials = [
+  {
+    quote:
+      "RVGWealth gave me the clarity I never had with money. For the first time I have a real plan — and the confidence to follow it.",
+    name: "Rohan Mehta",
+    role: "Software Engineer",
+    initials: "RM",
+  },
+  {
+    quote:
+      "They didn't just hand me advice; they taught me how to think about my finances. My family's future finally feels secure.",
+    name: "Priya Nair",
+    role: "Business Owner",
+    initials: "PN",
+  },
+];
 
 export default function Home() {
   return (
@@ -27,19 +58,21 @@ export default function Home() {
               <span className="text-gold">Build Your Legacy.</span>
             </h1>
             <p className="text-body text-white/70 max-w-lg">
-              Bespoke financial stewardship for individuals who value discretion
-              and clarity. We craft personalized strategies that align with
-              your generational aspirations.
+              Your future isn&apos;t built by chance — it&apos;s built by
+              strategy. At RVGWealth, we turn your ambitions into a powerful
+              financial roadmap designed to grow, protect, and maximize your
+              wealth.
             </p>
             <div className="flex items-center gap-4">
               <Button
+                href="/services"
                 variant="primary"
                 className="bg-gold text-ink hover:bg-gold/90"
               >
                 Explore Our Services
               </Button>
-              <Button variant="ghost" className="!text-white">
-                Our Philosophy
+              <Button href="/membership" variant="ghost" className="!text-white">
+                View Membership
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
@@ -59,221 +92,216 @@ export default function Home() {
         </div>
       </Section>
 
-      
+      {/* Journey band */}
+      <Section background="sage" divider>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {journey.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <div key={step.label} className="flex items-center gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-evergreen/10 text-evergreen ring-1 ring-evergreen/15">
+                  <Icon className="w-5 h-5" />
+                </span>
+                <div>
+                  <span className="text-h3 text-ink">{step.label}</span>
+                  {i < journey.length - 1 && (
+                    <ArrowRight className="hidden md:inline-block ml-3 w-4 h-4 text-gold align-middle" />
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
 
-      {/* Services bento */}
+      {/* Services */}
       <Section background="white" divider>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div className="max-w-2xl">
+            <Eyebrow tone="gold" className="mb-4">
+              Our Services
+            </Eyebrow>
             <h2 className="text-h2 text-ink mb-4">
-              Mastery Across Every Asset Class
+              Guidance for Every Stage of Your Journey
             </h2>
             <p className="text-body text-slate">
-              We provide a holistic ecosystem for wealth preservation, ensuring
-              your portfolio is as resilient as it is diversified.
+              We go beyond traditional financial services — empowering you with
+              the knowledge, strategies, and confidence to build lasting wealth.
             </p>
           </div>
-          <Button variant="ghost">
+          <Button href="/services" variant="ghost">
             View All Services
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:h-150 mb-26">
-          <Card
-            hover
-            className="md:col-span-8 p-10 relative overflow-hidden flex flex-col justify-end group cursor-pointer"
-          >
-            <img
-              alt="Investment Planning"
-              className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
-              data-alt="A macro photograph of professional architectural blueprints and golden compass tools on a minimalist white oak desk. The scene is bathed in soft, natural morning sunlight, casting gentle shadows that emphasize the premium, ivory-toned light mode aesthetic. The mood is focused and meticulous, reflecting a high-end investment planning environment with a palette of soft sages and bright off-whites."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrnmF6XbazkQ4kZZmPo2xPw42F6e0NcsOUyBDJ60B7uD_-Q4eCYXv-5RyoAd99lFMjQLuSFFwQJl6cAO9LpN3qG0Gl5beFFBmmf0iwqHKWDD_HeozZ3xHIw41BPZKTZRY05iN4jnmbGUSI1Brf0ouZO-emAUzooNUwoXyb_gbdXg46cm4VS-f6NPZUs-ydPdHA9Wt0rtQ_H8c6GkT8t6UukwwaQ-PYAz7nQJBmzSgSZXDH5hCeLtwyiMKyidi9qIrhbdqceLAV0RAa"
-            />
-            <div className="relative z-10">
-              <Eyebrow tone="gold" className="mb-4">
-                Strategic Management
-              </Eyebrow>
-              <h3 className="text-h2 text-ink mb-4">Investment Planning</h3>
-              <p className="text-body text-slate max-w-md">
-                Multi-generational portfolio construction focused on sustainable
-                growth and risk mitigation in global markets.
-              </p>
-            </div>
-          </Card>
-          <Card hover className="md:col-span-4 p-10 flex flex-col">
-            <div className="mb-auto">
-              <div className="w-14 h-14 bg-mist rounded-2xl flex items-center justify-center text-evergreen mb-8">
-                <Building2 className="w-7 h-7" />
-              </div>
-              <h3 className="text-h3 text-ink mb-4">Real Estate</h3>
-              <p className="text-body text-slate">
-                Unlocking value in premium residential and commercial
-                developments through exclusive access and rigorous analysis.
-              </p>
-            </div>
-            <button className="mt-8 flex items-center text-evergreen font-semibold gap-2 cursor-pointer">
-              Details <ChevronRight className="w-5 h-5" />
-            </button>
-          </Card>
-          <Card hover className="md:col-span-4 p-10 flex flex-col">
-            <div className="mb-auto">
-              <div className="w-14 h-14 bg-mist rounded-2xl flex items-center justify-center text-evergreen mb-8">
-                <Leaf className="w-7 h-7" />
-              </div>
-              <h3 className="text-h3 text-ink mb-4">Retirement</h3>
-              <p className="text-body text-slate">
-                Transitioning from accumulation to distribution with a focus
-                on tax-efficiency and lifestyle continuity.
-              </p>
-            </div>
-            <button className="mt-8 flex items-center text-evergreen font-semibold gap-2 cursor-pointer">
-              Details <ChevronRight className="w-5 h-5" />
-            </button>
-          </Card>
-          <Card
-            hover
-            className="md:col-span-8 p-10 flex items-center justify-between"
-          >
-            <div className="max-w-sm">
-              <h3 className="text-h3 text-ink mb-2">Education Funds</h3>
-              <p className="text-body text-slate">
-                Ensuring the next generation has the foundations for
-                excellence through structured educational trusts.
-              </p>
-            </div>
-            <div className="flex -space-x-4">
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-mist overflow-hidden">
-                <img
-                  className="w-full h-full object-cover"
-                  data-alt="Portrait of a professional man in a beige suit"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaSkWicqABIeCokrqevMu3HN1caBPLVo_SgOwEt5zwOZDCKwu2MP9j9qpRQFLsD5BVMIaqS_yY6MKvv-krP7Prj8ixTW89yNKcoVC-oGOtnbXPyO-TyQ_C2pFaSE6zcS3VatIfqG_cAJCi0CDM5soFFnQlSoK5qEauJYpX7MrRhmqjQ0vAn46k15TbJCImrqi5PWwlHEoZHvTpNdZDK_v8ikHQNQruFCRJzHzmcxdouJmvmm5Oeb5FnMAcpqfQ41zQY6bMeiSbKzmA"
-                />
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-mist overflow-hidden">
-                <img
-                  className="w-full h-full object-cover"
-                  data-alt="Portrait of a professional woman in a sage business jacket"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4V99iwZlIQQZybTrLYgUN3RxlkuABjlBY2Bx8QJXEa2Jw4syaPyk79-Hl82CyzDSvnHwT3vsvcI_kTOCwERaI9NbLZPLSHxXUrbq0hJIB7nBCsvc_U5Xqhm7TF8y_9x3CNxh_KnYIEk820UaDNDKmVtsxinCg3_HfWgj-zDLlW7d6-3Yp8wVCGefZHa6VpB5gZH_8cw4cKVgMoVqnJkOnrf9Zu7kj0YV8vU1qK0S3gt-sj5Ddx-kCy31zkF8qXXaUoNdFRTa2Z2EF"
-                />
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-mist flex items-center justify-center text-xs font-bold text-ink">
-                +8
-              </div>
-            </div>
+
+        {/* Flagship */}
+        <Card className="p-10 md:p-12 mb-8 bg-gradient-to-br from-mist via-white to-evergreen/10">
+          <Eyebrow tone="gold" className="mb-4">
+            {flagship.tagline}
+          </Eyebrow>
+          <h3 className="text-h2 text-ink mb-4">{flagship.title}</h3>
+          <p className="text-body text-slate max-w-2xl mb-8">
+            {flagship.description}
+          </p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
+            {flagship.items.map((item) => (
+              <span key={item} className="flex items-center gap-2 text-slate">
+                <Check className="w-4 h-4 text-gold" />
+                <span className="text-body">{item}</span>
+              </span>
+            ))}
+          </div>
+        </Card>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <Card key={service.title} hover className="p-8 flex flex-col">
+                <span className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-evergreen/10 text-evergreen ring-1 ring-evergreen/15">
+                  <Icon className="w-6 h-6" />
+                </span>
+                <h3 className="text-h3 text-ink mb-2">{service.title}</h3>
+                <p className="text-body text-slate">{service.description}</p>
+              </Card>
+            );
+          })}
+        </div>
+      </Section>
+
+      {/* Mission */}
+      <Section background="evergreen" divider>
+        <div className="max-w-3xl mx-auto text-center">
+          <Eyebrow tone="gold" className="mb-6">
+            Our Mission
+          </Eyebrow>
+          <p className="text-h2 text-white leading-snug mb-8">{mission}</p>
+          <div className="inline-flex items-baseline gap-3">
+            <span className="text-display text-gold">100,000</span>
+            <span className="text-body text-white/70">lives we&apos;re here to transform</span>
+          </div>
+        </div>
+      </Section>
+
+      {/* Story */}
+      <Section background="white" divider>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <Eyebrow tone="gold" className="mb-4">
+              A Story Worth Reflecting On
+            </Eyebrow>
+            <h2 className="text-h2 text-ink mb-6">Wealth Isn&apos;t Built Overnight.</h2>
+            <p className="text-body text-slate mb-4">
+              A hardworking family dreams of a better future — security, comfort,
+              and stability for their loved ones. Along the way come the
+              &ldquo;easy opportunities&rdquo;: double your money, guaranteed
+              returns, limited-time offers.
+            </p>
+            <p className="text-body text-slate">
+              What looks like a shortcut often becomes a setback. The truth is
+              simple: wealth is built with knowledge, discipline, and the right
+              strategy — and awareness is the first step toward financial
+              freedom.
+            </p>
+          </div>
+          <Card className="p-10">
+            <h3 className="text-h3 text-ink mb-6">The Turning Point</h3>
+            <ul className="space-y-4">
+              {turningPoints.map((point) => (
+                <li key={point} className="flex items-start gap-3">
+                  <Check className="w-5 h-5 shrink-0 text-gold mt-0.5" />
+                  <span className="text-body text-slate">{point}</span>
+                </li>
+              ))}
+            </ul>
           </Card>
         </div>
       </Section>
 
       {/* Testimonials */}
-      <Section background="white" divider>
+      <Section background="sage" divider>
         <div className="text-center mb-16">
           <Eyebrow tone="gold" className="mb-4">
             Testimonials
           </Eyebrow>
-          <h2 className="text-h2 text-ink">Voices of Stewardship</h2>
+          <h2 className="text-h2 text-ink">Voices of Confidence</h2>
         </div>
-        <div className="relative flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
-          <Card className="min-w-[450px] snap-center p-12">
-            <div className="flex gap-1 mb-6">
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-            </div>
-            <p className="text-h3 text-ink mb-8 leading-relaxed">
-              "The level of personalized attention and strategic foresight at RVG
-              is unparalleled. They didn't just manage my portfolio; they
-              understood my legacy."
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-mist overflow-hidden">
-                <img
-                  alt="Client"
-                  className="w-full h-full object-cover rounded-full"
-                  data-alt="A high-end portrait of a senior business executive in a classic charcoal wool suit against a minimalist light ivory background. The lighting is soft and flattering, emphasizing a mood of calm authority and success. The color palette is restricted to elegant neutral tones with soft sage accents in the background environment."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsMlFkoKLalRovD2siIGveuoW5i6Ck1RNy3TK8uG4mSPt07_0rpDjr_cSPh5HjjkZKFbUEXmo2HcF6vazyN2ZMnJ6-jjNrHHv05YDxe2FwarBcUwETg0S53vnFW8TYVtC79uIGIEuzjxBsXqaf25gxraBo_OP5YlebOTcsWqeePT1nlmb5GO4hN4ehAj7yn728g-38wt8USeiMYv4VnCaz3cyIU6P8SDsMflHQPByMFoD57_KD8aNtDXmDdyiTGhxX_LDm2_MPbki"
-                />
+        <div className="grid md:grid-cols-2 gap-8">
+          {testimonials.map((t) => (
+            <Card key={t.name} className="p-12">
+              <div className="flex gap-1 mb-6">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                ))}
               </div>
-              <div>
-                <h4 className="font-bold text-ink">Julian Thorne</h4>
-                <p className="text-sm text-slate">CEO, Heritage Logistics</p>
+              <p className="text-h3 text-ink mb-8 leading-relaxed">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="flex items-center gap-4">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-evergreen/10 font-semibold text-evergreen ring-1 ring-evergreen/15">
+                  {t.initials}
+                </span>
+                <div>
+                  <h4 className="font-bold text-ink">{t.name}</h4>
+                  <p className="text-sm text-slate">{t.role}</p>
+                </div>
               </div>
-            </div>
-          </Card>
-          <Card className="min-w-[450px] snap-center p-12">
-            <div className="flex gap-1 mb-6">
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <Star className="w-5 h-5 fill-gold text-gold" />
-            </div>
-            <p className="text-h3 text-ink mb-8 leading-relaxed">
-              "Their transparency in real estate development has been a breath
-              of fresh air. I finally feel like a partner in my own wealth
-              journey."
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-mist overflow-hidden">
-                <img
-                  alt="Client"
-                  className="w-full h-full object-cover rounded-full"
-                  data-alt="A professional portrait of a successful female entrepreneur in a minimalist white business studio. She wears a tailored linen blazer in a soft sage color. The lighting is airy and bright, emphasizing a light-mode aesthetic that is clean, premium, and sophisticated. The background is a soft ivory-tinted wall with subtle shadows."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu50XlJ9m_H-_tPmpo1lgqlvLgzAUw9_j0u7vEGktZfQN8ZP1z19b2PZgGtHjoFUyHNdP9CQpvIXEE-djnBnGQztHrdybZUfVUWrblJVJGIhXzeef5l8EP4Nr3hSiFaF2wBaVvCFw--_HuDRpNKA1ssm0hhlzOsjNqVnFSNqLDjBfRrDgh3vr4ry3QIRLl4VZbNNenlGEwa-VCApZH8TgGHyZ41V_8y2lzy8IKHstYLfE6VofkxAsFfS0XC_Sw5e4TThSYwzky4_-X"
-                />
-              </div>
-              <div>
-                <h4 className="font-bold text-ink">Eleanor Vance</h4>
-                <p className="text-sm text-slate">Founder, Vance Interiors</p>
-              </div>
-            </div>
-          </Card>
+            </Card>
+          ))}
         </div>
       </Section>
 
       {/* Pricing CTA */}
       <Section background="evergreen" divider>
         <div className="flex flex-col items-center text-center">
-          <Eyebrow tone="light" className="mb-6 tracking-[0.3em]">
-            Next Steps
+          <Eyebrow tone="gold" className="mb-6">
+            Membership
           </Eyebrow>
-          <h2 className="text-h2 text-white mb-8">
-            Ready to Start Your Journey?
-          </h2>
+          <h2 className="text-h2 text-white mb-8">Ready to Start Your Journey?</h2>
           <p className="text-body text-white/70 max-w-xl mb-12">
-            Select the stewardship path that aligns with your current
-            milestone. Join our exclusive membership for premium insights.
+            Choose the stage that fits where you are today. One-time enrolment —
+            no recurring fees.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl items-center">
-            <div className="bg-white/10 p-10 rounded-3xl border border-white/20 flex flex-col items-center">
-              <h3 className="text-h3 text-white mb-2">Foundation</h3>
-              <span className="text-h2 text-white mb-6">
-                $1.5k<span className="text-sm text-white/50">/yr</span>
-              </span>
-              <Button variant="secondary" className="w-full bg-white text-ink border-white hover:bg-white/90 hover:border-white">
-                Select Tier
-              </Button>
-            </div>
-            <Card className="p-10 flex flex-col items-center scale-105 relative z-10">
-              <div className="absolute -top-4 bg-gold text-ink px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                Most Preferred
-              </div>
-              <h3 className="text-h3 text-ink mb-2">Steward</h3>
-              <span className="text-h2 text-ink mb-6">
-                $5.0k<span className="text-sm text-slate">/yr</span>
-              </span>
-              <Button variant="primary" className="w-full">
-                Select Tier
-              </Button>
-            </Card>
-            <div className="bg-white/10 p-10 rounded-3xl border border-white/20 flex flex-col items-center">
-              <h3 className="text-h3 text-white mb-2">Legacy</h3>
-              <span className="text-h2 text-white mb-6">Custom</span>
-              <Button variant="secondary" className="w-full bg-white text-ink border-white hover:bg-white/90 hover:border-white">
-                Contact Us
-              </Button>
-            </div>
+            {tiers.map((tier) =>
+              tier.popular ? (
+                <Card
+                  key={tier.name}
+                  className="p-10 flex flex-col items-center scale-105 relative z-10"
+                >
+                  <div className="absolute -top-4 bg-gold text-ink px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                    Most Popular
+                  </div>
+                  <h3 className="text-h3 text-ink mb-2">{tier.name}</h3>
+                  <span className="text-h2 text-ink mb-6">
+                    {tier.price}
+                    <span className="text-sm text-slate"> one-time</span>
+                  </span>
+                  <Button href="/membership" variant="primary" className="w-full">
+                    {tier.cta}
+                  </Button>
+                </Card>
+              ) : (
+                <div
+                  key={tier.name}
+                  className="bg-white/10 p-10 rounded-3xl border border-white/20 flex flex-col items-center"
+                >
+                  <h3 className="text-h3 text-white mb-2">{tier.name}</h3>
+                  <span className="text-h2 text-white mb-6">
+                    {tier.price}
+                    <span className="text-sm text-white/50"> one-time</span>
+                  </span>
+                  <Button
+                    href="/membership"
+                    variant="secondary"
+                    className="w-full bg-white text-ink border-white hover:bg-white/90 hover:border-white"
+                  >
+                    {tier.cta}
+                  </Button>
+                </div>
+              )
+            )}
           </div>
         </div>
       </Section>
