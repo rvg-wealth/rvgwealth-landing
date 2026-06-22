@@ -1,217 +1,118 @@
 import { ArrowRight, ChevronDown, MapPin, Megaphone, Phone } from "lucide-react";
+import { Section } from "@/components/Section";
+import { Button } from "@/components/Button";
+import { Card } from "@/components/Card";
+import { Eyebrow } from "@/components/Eyebrow";
 
 export default function ContactPage() {
   return (
-    <div className="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-      <nav className="fixed top-0 w-full z-50 border-b border-stone-200/30 bg-white/85 backdrop-blur-2xl shadow-[0_4px_30px_rgba(79,99,82,0.08)]">
-        <div className="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
-          <div className="text-2xl font-serif font-bold tracking-tighter text-[#4F6352]">
-            RVG Wealth
-          </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/services"
-            >
-              Services
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/education"
-            >
-              Education
-            </a>
-            <a
-              className="font-body-md text-stone-500 hover:text-[#4F6352] transition-colors"
-              href="/membership"
-            >
-              Membership
-            </a>
-            <a
-              className="font-body-md text-[#4F6352] border-b border-[#4F6352] pb-1 font-semibold"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-          <button className="font-body-md px-6 py-2 bg-primary-container text-on-primary-container rounded-full hover:scale-105 transition-all duration-300">
-            Book a Consultation
-          </button>
-        </div>
-      </nav>
-      <main className="pt-32">
-        <header className="max-w-7xl mx-auto px-8 py-24 text-center">
-          <h1 className="font-display-xl text-display-xl text-primary mb-6">
-            Begin Your Stewardship Journey.
-          </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Connect with our advisory team to discuss your family's financial
-            future. Our heritage-focused approach ensures your legacy is preserved
-            with the utmost discretion.
-          </p>
-        </header>
-        <section className="max-w-7xl mx-auto px-8 mb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-5 space-y-12">
-              <div>
-                <h2 className="font-headline-lg text-headline-lg text-primary mb-6">
-                  Sydney Headquarters
-                </h2>
-                <div className="flex items-start gap-4 mb-8">
-                  <MapPin className="w-6 h-6 text-primary-container" />
-                  <div className="font-body-md text-on-surface-variant">
-                    <p className="font-bold text-on-surface">1200 Legacy Tower</p>
-                    <p>Financial District, Sydney NSW 2000</p>
-                    <p>Australia</p>
-                  </div>
-                </div>
-                <div className="w-full h-80 rounded-xl overflow-hidden shadow-lg border border-outline-variant relative">
-                  <img
-                    className="w-full h-full object-cover"
-                    data-alt="A sophisticated map view of the Sydney financial district skyline with soft daylight reflecting off glass skyscrapers. The image maintains a professional, minimalist aesthetic with subtle sage and ivory tones, highlighting the iconic architectural landscape. The mood is serene and prestigious, fitting for a high-end wealth management firm headquarters location."
-                    data-location="Sydney"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZHzG-vtgpayeLvjUsoJcd_y92XG7vkpizKVmaSPwrit7_SpMWzPFu2lLpNYAXrbSDhfbs0P07oXzUq1aYOYlPdi5nH5L0aM9cd9mmlt2dUdUCAogScwVu37e4DRWBVG7MqkueoM4QIY5DsKZkVmpmHTciHNRowy6QeFtYgxz7TrbIjqdbkYxlteIF1sF1Z2NJjjOD8taPR2L7yLF_mFsVFjoWRPXoKrng7h2rAi07oTGd8KLL4XjiwkGpf6Vkv2s5oKLt1tnKH0e3"
-                  />
-                  <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-                </div>
+    <>
+      <Section background="evergreen" className="text-center">
+        <h1 className="text-display text-white mb-6">
+          Begin Your Stewardship Journey.
+        </h1>
+        <p className="text-body text-white/70 max-w-2xl mx-auto">
+          Connect with our advisory team to discuss your family's financial
+          future. Our heritage-focused approach ensures your legacy is preserved
+          with the utmost discretion.
+        </p>
+      </Section>
+
+      <Section background="white" divider>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5 space-y-8">
+            <h2 className="text-h2 text-ink">Visit Our Office</h2>
+            <div className="flex items-start gap-4">
+              <MapPin className="w-6 h-6 text-evergreen shrink-0" />
+              <div className="text-body text-slate">
+                <p className="font-bold text-ink">RVGWealth Advisory</p>
+                <p>[Office address], [City]</p>
+                <p>India</p>
               </div>
             </div>
-            <div className="lg:col-span-7">
-              <div className="glass-surface p-12 rounded-xl rim-light">
-                <form className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="font-label-caps text-label-caps text-outline uppercase">
-                        Full Name
-                      </label>
-                      <input
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
-                        placeholder="Julian Montgomery"
-                        type="text"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="font-label-caps text-label-caps text-outline uppercase">
-                        Email Address
-                      </label>
-                      <input
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300"
-                        placeholder="julian@example.com"
-                        type="email"
-                      />
-                    </div>
+            <div className="w-full h-80 rounded-2xl overflow-hidden border border-hairline bg-gradient-to-br from-mist to-evergreen/10 flex items-center justify-center">
+              <div className="flex flex-col items-center gap-2 text-evergreen/70">
+                <MapPin className="w-8 h-8" />
+                <span className="text-eyebrow">Map — embed your office location</span>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-7">
+            <Card className="p-10 md:p-12">
+              <form className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <Eyebrow tone="muted">Full Name</Eyebrow>
+                    <input
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 focus:border-evergreen focus:outline-none"
+                      placeholder="Julian Montgomery"
+                      type="text"
+                    />
                   </div>
                   <div className="space-y-2">
-                    <label className="font-label-caps text-label-caps text-outline uppercase">
-                      Investment Horizon
-                    </label>
-                    <div className="relative">
-                      <select
-                        className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none appearance-none cursor-pointer"
-                        defaultValue="mid"
-                      >
-                        <option value="low">&lt;$1M</option>
-                        <option value="mid">$1M - $5M</option>
-                        <option value="high">$5M+</option>
-                      </select>
-                      <ChevronDown className="absolute right-0 top-3 pointer-events-none w-5 h-5" />
-                    </div>
+                    <Eyebrow tone="muted">Email Address</Eyebrow>
+                    <input
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 focus:border-evergreen focus:outline-none"
+                      placeholder="julian@example.com"
+                      type="email"
+                    />
                   </div>
-                  <div className="space-y-2">
-                    <label className="font-label-caps text-label-caps text-outline uppercase">
-                      Message
-                    </label>
-                    <textarea
-                      className="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-3 focus:outline-none placeholder:text-stone-300 resize-none"
-                      placeholder="How may we assist in your financial stewardship?"
-                      rows={4}
-                    ></textarea>
+                </div>
+                <div className="space-y-2">
+                  <Eyebrow tone="muted">I&apos;m Interested In</Eyebrow>
+                  <div className="relative">
+                    <select
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 focus:border-evergreen focus:outline-none appearance-none cursor-pointer"
+                      defaultValue="growth"
+                    >
+                      <option value="foundation">Foundation Stage</option>
+                      <option value="growth">Growth Stage</option>
+                      <option value="apex">Apex Stage</option>
+                      <option value="general">General Enquiry</option>
+                    </select>
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none w-5 h-5 text-slate" />
                   </div>
-                  <button
-                    className="w-full md:w-auto px-12 py-4 bg-primary-container text-on-primary-container rounded-lg font-body-md font-semibold hover:shadow-[0_8px_30px_rgba(79,99,82,0.2)] transition-all duration-300 flex items-center justify-center gap-2"
-                    type="submit"
-                  >
-                    Request Private Consultation
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="max-w-7xl mx-auto px-8 mb-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-surface p-8 rounded-xl rim-light flex items-center gap-6 group hover:bg-white transition-colors duration-300">
-              <div className="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
-                <Phone className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-1">
-                  Direct Inquiry
-                </h3>
-                <p className="font-body-md text-on-surface-variant">
-                  +61 (2) 5550 1200
-                </p>
-              </div>
-            </div>
-            <div className="glass-surface p-8 rounded-xl rim-light flex items-center gap-6 group hover:bg-white transition-colors duration-300">
-              <div className="w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
-                <Megaphone className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-1">
-                  Press &amp; Media
-                </h3>
-                <p className="font-body-md text-on-surface-variant">
-                  press@rvgwealth.com
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer className="w-full border-t border-stone-200 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-serif font-bold text-stone-900">
-            RVG Wealth Management
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Privacy Policy
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Terms of Service
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Regulatory Disclosure
-            </a>
-            <a
-              className="font-serif text-sm tracking-wide text-stone-600 hover:underline decoration-emerald-200 underline-offset-4 transition-opacity duration-200"
-              href="#"
-            >
-              Sitemap
-            </a>
-          </div>
-          <div className="font-serif text-sm tracking-wide text-stone-600 text-center md:text-right">
-            © 2024 RVG Wealth Management. Members of the Financial District Guild.
+                </div>
+                <div className="space-y-2">
+                  <Eyebrow tone="muted">Message</Eyebrow>
+                  <textarea
+                    className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 focus:border-evergreen focus:outline-none resize-none"
+                    placeholder="How may we assist in your financial stewardship?"
+                    rows={4}
+                  ></textarea>
+                </div>
+                <Button type="submit">
+                  Request Private Consultation
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </form>
+            </Card>
           </div>
         </div>
-      </footer>
-    </div>
+      </Section>
+
+      <Section background="evergreen" divider>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card hover className="p-8 flex items-center gap-6">
+            <div className="w-16 h-16 rounded-full bg-evergreen/10 text-evergreen flex items-center justify-center shrink-0">
+              <Phone className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-h3 text-ink mb-1">Call Us</h3>
+              <p className="text-slate">+91 00000 00000</p>
+            </div>
+          </Card>
+          <Card hover className="p-8 flex items-center gap-6">
+            <div className="w-16 h-16 rounded-full bg-gold/10 text-gold flex items-center justify-center shrink-0">
+              <Megaphone className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-h3 text-ink mb-1">Press &amp; Media</h3>
+              <p className="text-slate">press@rvgwealth.com</p>
+            </div>
+          </Card>
+        </div>
+      </Section>
+    </>
   );
 }
