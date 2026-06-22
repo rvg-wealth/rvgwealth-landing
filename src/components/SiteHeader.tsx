@@ -5,6 +5,7 @@ import { navLinks, primaryCta } from "@/lib/nav";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
+import Link from "next/link";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -17,9 +18,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-white/90 backdrop-blur-xl">
       <Container className="flex items-center justify-between py-5">
-        <a href="/" className="shrink-0">
+        <Link href="/" className="shrink-0">
           <Logo />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
           {navLinks.map((link) => {
