@@ -29,8 +29,6 @@ export const footerColumns: FooterColumn[] = [
   {
     heading: "Resources",
     links: [
-      { label: "Education Center", href: "/education" },
-      { label: "Quarterly Reports", href: "#" },
       { label: "Membership Benefits", href: "/membership" },
       { label: "Private Portal", href: "#" },
     ],
