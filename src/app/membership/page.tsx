@@ -6,20 +6,20 @@ import { Eyebrow } from "@/components/Eyebrow";
 export default function MembershipPage() {
   return (
     <>
-      <Section background="white" className="text-center">
+      <Section background="evergreen" className="text-center">
         <Eyebrow tone="gold" className="mb-4">
           Architecting Legacies
         </Eyebrow>
-        <h1 className="text-display text-ink mb-6">
+        <h1 className="text-display text-white mb-6">
           Choose Your Level of Stewardship
         </h1>
-        <p className="text-body text-slate max-w-2xl mx-auto">
+        <p className="text-body text-white/70 max-w-2xl mx-auto">
           Sophisticated wealth management tailored to your life's complexity.
           From foundational guidance to multi-generational concierge services.
         </p>
       </Section>
 
-      <Section background="mist">
+      <Section background="white" divider>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           <div className="group relative flex flex-col rounded-xl border border-hairline border-t-white bg-white/70 p-10 shadow-[0_4px_30px_rgba(21,35,28,0.06)] backdrop-blur-xl transition-transform duration-500 hover:scale-[1.02]">
             <div className="mb-8">
@@ -159,7 +159,7 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      <Section background="white">
+      <Section background="white" divider>
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
@@ -206,9 +206,9 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      <Section background="white">
+      <Section background="evergreen" divider>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-h2 text-ink text-center mb-16">
+          <h2 className="text-h2 text-white text-center mb-16">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
