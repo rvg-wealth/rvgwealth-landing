@@ -61,15 +61,15 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <Section background="white">
+      <Section background="evergreen">
         <div className="max-w-3xl">
           <Eyebrow tone="gold" className="mb-4">
             Comprehensive Stewardship
           </Eyebrow>
-          <h1 className="text-display text-ink mb-6">
+          <h1 className="text-display text-white mb-6">
             Expert Guidance for Modern Wealth
           </h1>
-          <p className="text-body text-slate">
+          <p className="text-body text-white/70">
             We provide bespoke financial strategies designed for those who
             value discretion, professional integrity, and the long-term
             preservation of capital.
@@ -77,7 +77,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section background="mist">
+      <Section background="white" divider>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => {
             const Icon = service.icon;
@@ -116,7 +116,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section background="white">
+      <Section background="evergreen" divider>
         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-hairline">
           <img
             alt="RVG Wealth stewardship"
