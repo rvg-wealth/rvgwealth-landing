@@ -21,22 +21,20 @@ export default function ContactPage() {
       <Section background="white" divider>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 space-y-8">
-            <h2 className="text-h2 text-ink">Sydney Headquarters</h2>
+            <h2 className="text-h2 text-ink">Visit Our Office</h2>
             <div className="flex items-start gap-4">
               <MapPin className="w-6 h-6 text-evergreen shrink-0" />
               <div className="text-body text-slate">
-                <p className="font-bold text-ink">1200 Legacy Tower</p>
-                <p>Financial District, Sydney NSW 2000</p>
-                <p>Australia</p>
+                <p className="font-bold text-ink">RVGWealth Advisory</p>
+                <p>[Office address], [City]</p>
+                <p>India</p>
               </div>
             </div>
-            <div className="w-full h-80 rounded-2xl overflow-hidden border border-hairline relative">
-              <img
-                className="w-full h-full object-cover"
-                data-alt="A sophisticated map view of the Sydney financial district skyline with soft daylight reflecting off glass skyscrapers. The image maintains a professional, minimalist aesthetic with subtle sage and ivory tones, highlighting the iconic architectural landscape. The mood is serene and prestigious, fitting for a high-end wealth management firm headquarters location."
-                data-location="Sydney"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZHzG-vtgpayeLvjUsoJcd_y92XG7vkpizKVmaSPwrit7_SpMWzPFu2lLpNYAXrbSDhfbs0P07oXzUq1aYOYlPdi5nH5L0aM9cd9mmlt2dUdUCAogScwVu37e4DRWBVG7MqkueoM4QIY5DsKZkVmpmHTciHNRowy6QeFtYgxz7TrbIjqdbkYxlteIF1sF1Z2NJjjOD8taPR2L7yLF_mFsVFjoWRPXoKrng7h2rAi07oTGd8KLL4XjiwkGpf6Vkv2s5oKLt1tnKH0e3"
-              />
+            <div className="w-full h-80 rounded-2xl overflow-hidden border border-hairline bg-gradient-to-br from-mist to-evergreen/10 flex items-center justify-center">
+              <div className="flex flex-col items-center gap-2 text-evergreen/70">
+                <MapPin className="w-8 h-8" />
+                <span className="text-eyebrow">Map — embed your office location</span>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-7">
@@ -61,15 +59,16 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Eyebrow tone="muted">Investment Horizon</Eyebrow>
+                  <Eyebrow tone="muted">I&apos;m Interested In</Eyebrow>
                   <div className="relative">
                     <select
                       className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 focus:border-evergreen focus:outline-none appearance-none cursor-pointer"
-                      defaultValue="mid"
+                      defaultValue="growth"
                     >
-                      <option value="low">&lt;$1M</option>
-                      <option value="mid">$1M - $5M</option>
-                      <option value="high">$5M+</option>
+                      <option value="foundation">Foundation Stage</option>
+                      <option value="growth">Growth Stage</option>
+                      <option value="apex">Apex Stage</option>
+                      <option value="general">General Enquiry</option>
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none w-5 h-5 text-slate" />
                   </div>
@@ -99,8 +98,8 @@ export default function ContactPage() {
               <Phone className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-h3 text-ink mb-1">Direct Inquiry</h3>
-              <p className="text-slate">+61 (2) 5550 1200</p>
+              <h3 className="text-h3 text-ink mb-1">Call Us</h3>
+              <p className="text-slate">+91 00000 00000</p>
             </div>
           </Card>
           <Card hover className="p-8 flex items-center gap-6">
