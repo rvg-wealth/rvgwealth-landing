@@ -14,7 +14,7 @@ export default function ContactPage() {
         <p className="text-body text-white/70 max-w-2xl mx-auto">
           Connect with our advisory team to discuss your family's financial
           future. Our heritage-focused approach ensures your legacy is preserved
-          with the utmost discretion.
+          with the utmost discretion. 
         </p>
       </Section>
 
