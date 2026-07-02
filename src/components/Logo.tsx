@@ -1,18 +1,22 @@
-// Swappable logo slot.
-// When the brand asset arrives, replace the text node below with:
-//   import Image from "next/image";
-//   <Image src="/logo.svg" .../>           (transparent / no-background variant — for nav)
-//   <Image src="/logo-on-dark.svg" .../>   (background variant — for the evergreen footer)
-// Keep the `variant` prop so callers don't change.
+import Image from "next/image";
 
+// Circular brand mark + adaptive wordmark.
+// `onDark` switches the wordmark to white for dark/transparent headers.
 export function Logo({ variant = "default" }: { variant?: "default" | "onDark" }) {
   const color = variant === "onDark" ? "text-white" : "text-ink";
   return (
-    <span
-      className={`text-xl font-bold tracking-tight ${color}`}
-      aria-label="RVG Wealth"
-    >
-      RVG Wealth
+    <span className="inline-flex items-center gap-2.5" aria-label="RVGWealth">
+      <Image
+        src="/logo-mark.png"
+        alt=""
+        width={256}
+        height={256}
+        priority
+        className="h-9 w-9 rounded-full ring-1 ring-white/15"
+      />
+      <span className={`text-lg font-bold tracking-tight ${color}`}>
+        RVGWealth
+      </span>
     </span>
   );
 }
