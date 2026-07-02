@@ -12,11 +12,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "RVG Wealth",
+  title: "RVGWealth — Investment Planning Services",
   description:
-    "Bespoke financial stewardship for individuals who value discretion and clarity.",
+    "Empowering individuals with the knowledge, strategies, and confidence to build lasting wealth.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo-mark.png",
   },
 };
 
