@@ -116,6 +116,7 @@ export type Tier = {
   popular?: boolean;
   features: string[];
   cta: string;
+  ctaredirect: string;
 };
 
 export const tiers: Tier[] = [
@@ -131,6 +132,7 @@ export const tiers: Tier[] = [
       "Exclusive Financial Guidance Book",
     ],
     cta: "Get Started",
+    ctaredirect: "https://portal.rvgwealth.com/signup?tier=foundation",
   },
   {
     name: "Growth",
@@ -146,6 +148,7 @@ export const tiers: Tier[] = [
       "Goal-Based Planning Templates",
     ],
     cta: "Upgrade to Growth",
+    ctaredirect: "https://portal.rvgwealth.com/signup?tier=growth",
   },
   {
     name: "Apex",
@@ -162,6 +165,7 @@ export const tiers: Tier[] = [
       "Premium Wealth Building & Legacy Book",
     ],
     cta: "Go Apex",
+    ctaredirect: "https://portal.rvgwealth.com/signup?tier=apex",
   },
 ];
 
