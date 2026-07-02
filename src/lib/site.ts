@@ -3,7 +3,7 @@ export const siteInfo = {
   tagline:
     "Empowering individuals with the knowledge, strategies, and confidence to build lasting wealth.",
   address: {
-    line1: "RVGWealth Advisory",
+    line1: "RVGWealth",
     line2: "[Office address], [City], India",
     phone: "+91 00000 00000",
   },
@@ -21,7 +21,7 @@ export const footerColumns: FooterColumn[] = [
     heading: "Services",
     links: [
       { label: "Financial Education", href: "/services" },
-      { label: "Investment Planning", href: "/services" },
+      { label: "Goal-Based Planning", href: "/services" },
       { label: "Retirement Consultancy", href: "/services" },
       { label: "Insurance Planning", href: "/services" },
       { label: "NRI Services", href: "/services" },

@@ -20,15 +20,15 @@ export type Service = {
 // Flagship offering — featured separately from the consultancy grid.
 export const flagship: Service = {
   icon: TrendingUp,
-  title: "Investment Planning",
-  tagline: "Strategic Management",
+  title: "Goal-Based Financial Planning",
+  tagline: "Strategic Financial Roadmap",
   description:
-    "High-impact strategies tailored to your situation, goals, and aspirations — built across asset allocation, risk, and behavioral finance to grow, protect, and accelerate your wealth.",
+    "Personalized frameworks tailored to your aspirations — utilizing logical asset mapping and behavioral finance to help you organize, protect, and build toward your financial milestones.",
   items: [
-    "Asset Allocation & Securities",
-    "Investment Risk & Performance",
+    "Asset Class Education & Allocation Frameworks",
+    "Risk Awareness & Performance Literacy",
     "Behavioral Finance",
-    "Suitability & Objectives",
+    "Goals, Constraints & Suitability",
   ],
 };
 
@@ -77,7 +77,7 @@ export const services: Service[] = [
     description:
       "With longer lifespans, the real risk is outliving your savings. We build logic-driven plans that sustain your lifestyle for 25–30+ years.",
     items: [
-      "Longevity & corpus optimization",
+      "Longevity & corpus sustainability mapping",
       "Income sustainability models",
       "Resilient retirement roadmap",
     ],
@@ -99,7 +99,7 @@ export const services: Service[] = [
     title: "NRI Services",
     tagline: "Stay Connected to India",
     description:
-      "Structure the right banking and investment solutions across borders — optimized for tax efficiency, repatriation, and RBI compliance.",
+      "We guide you through banking and asset class structures across borders — with a focus on tax efficiency, repatriation, and RBI compliance.",
     items: [
       "NRE, NRO & FCNR accounts",
       "Multi-currency income management",
@@ -122,10 +122,10 @@ export type Tier = {
 export const tiers: Tier[] = [
   {
     name: "Foundation",
-    stage: "Start Strong",
+    stage: "Financial Literacy Foundation",
     price: "₹7,999",
     tagline:
-      "Build a solid financial base — strengthen your fundamentals, financial literacy, and clear, achievable goals.",
+      "Build a logic-driven financial base through educational videos, planning templates, and clear, achievable goals.",
     features: [
       "Full Financial “Money Matters” Video Course",
       "Ready-to-use Financial Planning Templates",
@@ -136,10 +136,10 @@ export const tiers: Tier[] = [
   },
   {
     name: "Growth",
-    stage: "Accelerate Progress",
+    stage: "Structured Growth Mapping",
     price: "₹24,999",
     tagline:
-      "Take your finances to the next level with personalized, one-on-one strategy and active management.",
+      "Take your finances to the next level with interactive, goal-based planning and one-on-one sessions.",
     popular: true,
     features: [
       "Everything in Foundation",
@@ -152,16 +152,16 @@ export const tiers: Tier[] = [
   },
   {
     name: "Apex",
-    stage: "Achieve Excellence",
+    stage: "Strategic Stewardship",
     price: "₹54,999",
     tagline:
-      "Complete financial leadership — a trusted partner to preserve, grow, and optimize your wealth and legacy.",
+      "Comprehensive stewardship — a trusted partner to help you track, protect, and efficiently manage your legacy roadmap.",
     features: [
       "Everything in Growth",
-      "Dedicated 1-on-1 Priority Advisory",
-      "Comprehensive Wealth Management & Roadmap",
-      "Ongoing Portfolio Monitoring & Optimization",
-      "Risk Management & Wealth Protection",
+      "Dedicated One-on-One Comprehensive Consultation",
+      "Comprehensive Financial Roadmap",
+      "Periodic Goal Alignment & Efficiency Review",
+      "Risk Awareness & Wealth Protection Planning",
       "Premium Wealth Building & Legacy Book",
     ],
     cta: "Go Apex",
@@ -185,18 +185,28 @@ export const planningProcess: Step[] = [
     detail: "Evaluate your position; assess strengths, gaps, and opportunities.",
   },
   {
-    title: "Strategy Development",
-    detail: "Build and present personalized recommendations, explained clearly.",
+    title: "Financial Roadmap Design",
+    detail:
+      "Build and present a logical goal framework with clearly explained options.",
   },
   {
-    title: "Implementation",
-    detail: "Define responsibilities and support execution and selection.",
+    title: "Guided Action",
+    detail:
+      "Define the steps for you to take, with educational support as you select and execute your own plan.",
   },
   {
-    title: "Review & Optimization",
-    detail: "Periodic evaluation; adjust strategies as life and goals change.",
+    title: "Periodic Review & Realignment",
+    detail:
+      "Evaluate progress toward goals and adjust your roadmap to stay on track with life changes.",
   },
 ];
 
 export const mission =
   "To empower 100,000 middle-class individuals to break free from financial stress and debt — and step into a life of confidence, clarity, and abundance.";
+
+// SEBI compliance disclosures — shown in the footer and near engagement points.
+export const disclaimers = {
+  registration:
+    "RVGWealth is a financial consultancy specializing in goal-based planning. We provide educational frameworks and logic-driven strategies based on FPSB standards. We are not a SEBI Registered Investment Adviser and do not provide specific securities recommendations for a fee.",
+  risk: "Investments in the securities market are subject to market risks. Read all the related documents carefully before investing.",
+};

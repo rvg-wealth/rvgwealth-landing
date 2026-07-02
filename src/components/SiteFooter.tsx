@@ -1,6 +1,7 @@
 import { Globe, Mail, Share2 } from "lucide-react";
 import Image from "next/image";
 import { footerColumns, siteInfo } from "@/lib/site";
+import { disclaimers } from "@/lib/content";
 import { Container } from "./Container";
 
 export function SiteFooter() {
@@ -48,7 +49,17 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        {/* SEBI disclosures */}
+        <div className="mt-16 space-y-3 border-t border-white/10 pt-8">
+          <p className="text-xs leading-relaxed text-white/45">
+            {disclaimers.registration}
+          </p>
+          <p className="text-xs leading-relaxed text-white/45">
+            {disclaimers.risk}
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
           <p className="text-sm text-white/50">{siteInfo.copyright}</p>
           <div className="flex items-center gap-2 text-sm text-white/70">
             <Globe className="h-4 w-4 text-gold" />

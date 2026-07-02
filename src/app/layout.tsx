@@ -12,7 +12,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "RVGWealth — Investment Planning Services",
+  title: "RVGWealth — Goal-Based Financial Planning",
   description:
     "Empowering individuals with the knowledge, strategies, and confidence to build lasting wealth.",
   icons: {

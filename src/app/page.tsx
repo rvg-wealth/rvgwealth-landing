@@ -3,7 +3,6 @@ import {
   BookOpen,
   Check,
   Lightbulb,
-  Star,
   Target,
   TrendingUp,
 } from "lucide-react";
@@ -11,7 +10,13 @@ import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Eyebrow } from "@/components/Eyebrow";
-import { flagship, mission, services, tiers } from "@/lib/content";
+import {
+  flagship,
+  mission,
+  planningProcess,
+  services,
+  tiers,
+} from "@/lib/content";
 
 const journey = [
   { icon: BookOpen, label: "Knowledge" },
@@ -25,23 +30,6 @@ const turningPoints = [
   "Make decisions with logic, not emotion",
   "Evaluate both opportunity and risk",
   "Follow a structured financial plan",
-];
-
-const testimonials = [
-  {
-    quote:
-      "RVGWealth gave me the clarity I never had with money. For the first time I have a real plan — and the confidence to follow it.",
-    name: "Rohan Mehta",
-    role: "Software Engineer",
-    initials: "RM",
-  },
-  {
-    quote:
-      "They didn't just hand me advice; they taught me how to think about my finances. My family's future finally feels secure.",
-    name: "Priya Nair",
-    role: "Business Owner",
-    initials: "PN",
-  },
 ];
 
 export default function Home() {
@@ -65,10 +53,9 @@ export default function Home() {
               <span className="text-gold">Build Your Legacy.</span>
             </h1>
             <p className="text-body text-white/70 max-w-lg">
-              Your future isn&apos;t built by chance — it&apos;s built by
-              strategy. At RVGWealth, we turn your ambitions into a powerful
-              financial roadmap designed to grow, protect, and maximize your
-              wealth.
+              Your future is built by intent. At RVGWealth, we turn your
+              ambitions into a structured financial roadmap designed to help
+              you organize, protect, and optimize your financial goals.
             </p>
             <div className="flex items-center gap-4">
               <Button
@@ -226,34 +213,22 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Testimonials */}
+      {/* Our Process */}
       <Section background="sage" divider>
         <div className="text-center mb-16">
           <Eyebrow tone="gold" className="mb-4">
-            Testimonials
+            Our Process
           </Eyebrow>
-          <h2 className="text-h2 text-ink">Voices of Confidence</h2>
+          <h2 className="text-h2 text-ink">A Structured Path to Clarity</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {testimonials.map((t) => (
-            <Card key={t.name} className="p-12">
-              <div className="flex gap-1 mb-6">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
-              <p className="text-h3 text-ink mb-8 leading-relaxed">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-4">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-evergreen/10 font-semibold text-evergreen ring-1 ring-evergreen/15">
-                  {t.initials}
-                </span>
-                <div>
-                  <h4 className="font-bold text-ink">{t.name}</h4>
-                  <p className="text-sm text-slate">{t.role}</p>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {planningProcess.map((step, i) => (
+            <Card key={step.title} className="p-8">
+              <span className="text-display text-gold/30 leading-none">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-h3 text-ink mt-4 mb-2">{step.title}</h3>
+              <p className="text-body text-slate">{step.detail}</p>
             </Card>
           ))}
         </div>
@@ -263,7 +238,7 @@ export default function Home() {
       <Section background="evergreen" divider>
         <div className="flex flex-col items-center text-center">
           <Eyebrow tone="gold" className="mb-6">
-            Membership
+            Financial Education &amp; Planning Packages
           </Eyebrow>
           <h2 className="text-h2 text-white mb-8">Ready to Start Your Journey?</h2>
           <p className="text-body text-white/70 max-w-xl mb-12">

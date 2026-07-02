@@ -1,14 +1,17 @@
 import {
   ArrowRight,
   ChevronDown,
-  MapPin,
+  Clock,
+  Globe,
   Megaphone,
   Phone,
+  Video,
 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Eyebrow } from "@/components/Eyebrow";
+import { disclaimers } from "@/lib/content";
 
 export default function ContactPage() {
   return (
@@ -21,39 +24,28 @@ export default function ContactPage() {
 
       <div className="relative">
         {/* Heading */}
-        <div className="text-center mb-14">
-          <h1 className="text-display text-white mb-6">
-            Begin Your Stewardship Journey.
+        <div className="text-center mb-8">
+          <h1 className="text-display text-white mb-3">
+            Begin Your Planning Journey.
           </h1>
-          <p className="text-body text-white/70 max-w-2xl mx-auto">
-            Connect with our advisory team to discuss your family&apos;s
-            financial future. Our heritage-focused approach ensures your legacy
-            is preserved with the utmost discretion.
+          <p className="text-body text-white/70 max-w-3xl mx-auto">
+            Connect with our planning team to discuss your personal financial
+            roadmap — from wherever you are.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left: address, contact rows, map */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left: how to reach us */}
           <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-h2 text-white">Visit Our Office</h2>
-            <div className="flex items-start gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold ring-1 ring-white/15">
-                <MapPin className="w-6 h-6 text-gold shrink-0 mt-1" />
-              </span>
-              <div className="flex-1 min-w-0 text-body text-white/70">
-                <p className="font-bold text-white">RVGWealth Advisory</p>
-                <p className="whitespace-nowrap">[Office address], [City], India</p>
-              </div>
-            </div>
-
+            <h2 className="text-h2 text-white">Get in Touch</h2>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 pb-3">
+              <div className="flex items-center gap-4">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold ring-1 ring-white/15">
                   <Phone className="w-5 h-5" />
                 </span>
                 <div>
                   <p className="text-eyebrow text-white/50">Call Us</p>
-                  <p className="text-body text-white">+91 00000 00000</p>
+                  <p className="text-body text-white">+91 96111 63687</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -65,27 +57,47 @@ export default function ContactPage() {
                   <p className="text-body text-white">press@rvgwealth.com</p>
                 </div>
               </div>
+              <div className="flex items-center gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold ring-1 ring-white/15">
+                  <Video className="w-5 h-5" />
+                </span>
+                <div>
+                  <p className="text-eyebrow text-white/50">Sessions</p>
+                  <p className="text-body text-white">
+                    One-on-one video consultations
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold ring-1 ring-white/15">
+                  <Globe className="w-5 h-5" />
+                </span>
+                <div>
+                  <p className="text-eyebrow text-white/50">Coverage</p>
+                  <p className="text-body text-white">
+                    India · Serving NRIs worldwide
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="w-full h-56 rounded-2xl overflow-hidden border border-white/15 bg-white/5 flex items-center justify-center">
-              <div className="flex flex-col items-center gap-2 text-white/50">
-                <MapPin className="w-8 h-8" />
-                <span className="text-eyebrow">
-                  Map — embed your office location
-                </span>
-              </div>
+            <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/5 px-5 py-4">
+              <Clock className="w-5 h-5 shrink-0 text-gold" />
+              <p className="text-sm text-white/70">
+                We respond to every enquiry within 24 hours.
+              </p>
             </div>
           </div>
 
           {/* Right: form */}
           <div className="lg:col-span-7">
-            <Card className="p-10 md:p-12">
-              <form className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-8">
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Eyebrow tone="muted">Full Name</Eyebrow>
                     <input
-                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none"
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-2.5 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none"
                       placeholder="Julian Montgomery"
                       type="text"
                     />
@@ -93,7 +105,7 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <Eyebrow tone="muted">Email Address</Eyebrow>
                     <input
-                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none"
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-2.5 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none"
                       placeholder="julian@example.com"
                       type="email"
                     />
@@ -103,7 +115,7 @@ export default function ContactPage() {
                   <Eyebrow tone="muted">I&apos;m Interested In</Eyebrow>
                   <div className="relative">
                     <select
-                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none appearance-none cursor-pointer"
+                      className="w-full bg-mist border border-hairline rounded-lg px-4 py-2.5 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none appearance-none cursor-pointer"
                       defaultValue="growth"
                     >
                       <option value="foundation">Foundation Stage</option>
@@ -117,17 +129,20 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <Eyebrow tone="muted">Message</Eyebrow>
                   <textarea
-                    className="w-full bg-mist border border-hairline rounded-lg px-4 py-3 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none resize-none"
-                    placeholder="How may we assist in your financial stewardship?"
-                    rows={4}
+                    className="w-full bg-mist border border-hairline rounded-lg px-4 py-2.5 text-ink placeholder:text-slate/60 focus:border-evergreen focus:outline-none resize-none"
+                    placeholder="How can we help you map your financial goals and build your roadmap?"
+                    rows={3}
                   ></textarea>
                 </div>
                 <div className="flex justify-center">
                   <Button type="submit">
-                    Request Private Consultation
+                    Request Discovery Session
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
+                <p className="text-xs leading-relaxed text-slate/70 text-center">
+                  {disclaimers.registration}
+                </p>
               </form>
             </Card>
           </div>

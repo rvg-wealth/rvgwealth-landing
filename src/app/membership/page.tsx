@@ -2,7 +2,7 @@ import { Check, ChevronDown, ShieldCheck, Users } from "lucide-react";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Eyebrow } from "@/components/Eyebrow";
-import { planningProcess, tiers } from "@/lib/content";
+import { disclaimers, planningProcess, tiers } from "@/lib/content";
 
 const faqs = [
   {
@@ -121,6 +121,17 @@ export default function MembershipPage() {
               </div>
             )
           )}
+        </div>
+        <div className="mt-12 max-w-3xl mx-auto text-center space-y-2">
+          <p className="text-sm text-slate">
+            One-time enrolment — no recurring fees.
+          </p>
+          <p className="text-xs leading-relaxed text-slate/80">
+            {disclaimers.registration}
+          </p>
+          <p className="text-xs leading-relaxed text-slate/80">
+            {disclaimers.risk}
+          </p>
         </div>
       </Section>
 
