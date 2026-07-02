@@ -26,13 +26,19 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
+      className={`sticky top-0 z-50 relative transition-colors duration-300 ${
         scrolled
           ? "border-b border-hairline bg-white/90 backdrop-blur-xl"
           : "border-b border-transparent bg-evergreen"
       }`}
     >
-      <Container className="flex items-center justify-between py-4">
+      {/* continues the hero's gold glow so header + hero read as one surface */}
+      <div
+        className={`pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(185,138,46,0.14),transparent_55%)] transition-opacity duration-300 ${
+          scrolled ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <Container className="relative flex items-center justify-between py-4">
         <Link href="/" className="shrink-0">
           <Logo variant={scrolled ? "default" : "onDark"} />
         </Link>
