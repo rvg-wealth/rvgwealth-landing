@@ -48,8 +48,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <Section background="evergreen">
-        <div className="flex flex-col md:flex-row items-center gap-16">
+      <Section
+        background="evergreen"
+        className="relative overflow-hidden flex items-center min-h-[calc(100dvh-81px)]"
+        containerClassName="w-full"
+      >
+        {/* ambient glow */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,138,46,0.14),transparent_55%)]" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-white/5 blur-[100px]" />
+        <div className="relative flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 space-y-8">
             <Eyebrow tone="gold">Bespoke Financial Stewardship</Eyebrow>
             <h1 className="text-display text-white leading-tight">
@@ -80,10 +87,10 @@ export default function Home() {
           <div className="md:w-1/2 relative">
             <div className="absolute -top-12 -right-12 w-64 h-64 bg-gold rounded-full blur-[80px] opacity-25" />
             <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-3xl border border-gold/30" />
-            <div className="rounded-2xl bg-white border border-hairline p-4 overflow-hidden relative z-10 shadow-[0_20px_40px_rgba(21,35,28,0.08)]">
+            <div className="rounded-2xl bg-gold border border-gold overflow-hidden relative z-10 shadow-[0_20px_40px_rgba(21,35,28,0.08)]">
               <img
                 alt="Financial Visualization"
-                className="rounded-xl w-full h-[400px] object-cover"
+                className="rounded-xl w-full h-[360px] lg:h-[460px] object-cover"
                 data-alt="A highly sophisticated, minimalist 3D visualization of wealth growth using translucent glass bars and golden financial data points. The lighting is soft and high-key, creating a luminous light-mode atmosphere with soft sage and ivory tones. The visual style is premium and professional, suggesting clarity and stewardship in financial planning through an elegant, abstract representation of success."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG6a627--3UfUrlDx4JivaoP26DFHOc5Sm_ZdniR9kxDnwhXaE0ibhtniy77XGZLFlboL-r-5qDkAtG4VMBvGv7Ia_HxdJsXl8iruuVvmBrutxblbAnsKVZWn4IzyQd_q1VkjRJ6HIl9N88djCqApNuzuDuwwsxtjTPc_3ZpNN3PHVd4-23ooq10FXULHYSf8ReZQkpS0-n6mqFJ54KxEzsJY9gFv8uoLPhBQZpJXxt_yzak6dGfXdnROqgymKMeL3HIpUBELyIkNJ"
               />

@@ -28,6 +28,14 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(185, 138, 46, 0.25);
+}
+
 body {
   background: var(--color-background);
   color: var(--color-ink);

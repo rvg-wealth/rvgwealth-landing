@@ -27,7 +27,12 @@ export default function MembershipPage() {
   return (
     <>
       {/* Hero */}
-      <Section background="evergreen" className="text-center">
+      <Section
+        background="evergreen"
+        className="text-center relative overflow-hidden flex items-center min-h-[calc(100dvh-81px)]"
+        containerClassName="w-full"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,138,46,0.14),transparent_55%)]" />
         <Eyebrow tone="gold" className="mb-4">
           Membership Program
         </Eyebrow>
