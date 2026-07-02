@@ -28,14 +28,25 @@ export function Section({
   /** Adds a faint gold hairline at the top to mark the section transition. */
   divider?: boolean;
 }) {
+  // Soft brand tints lift white sections off the page without shouting.
+  const depth = background === "white";
+
   return (
     <section
       className={`py-16 md:py-24 ${backgrounds[background]} ${
         divider ? "border-t border-gold/25" : ""
-      } ${className}`}
+      } ${depth ? "relative overflow-hidden" : ""} ${className}`}
     >
+      {depth && (
+        <>
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(31,111,92,0.05),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(185,138,46,0.05),transparent_50%)]" />
+        </>
+      )}
       {contained ? (
-        <Container className={containerClassName}>{children}</Container>
+        <Container className={`relative ${containerClassName}`}>
+          {children}
+        </Container>
       ) : (
         children
       )}
