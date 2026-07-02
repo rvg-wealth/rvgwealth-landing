@@ -1,7 +1,7 @@
 import { Globe, Mail, Share2 } from "lucide-react";
+import Image from "next/image";
 import { footerColumns, siteInfo } from "@/lib/site";
 import { Container } from "./Container";
-import { Logo } from "./Logo";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,13 @@ export function SiteFooter() {
       <Container className="py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div>
-            <Logo variant="onDark" />
+            <Image
+              src="/logo-lockup-transparent.png"
+              alt="RVGWealth — Investment Planning Services"
+              width={820}
+              height={380}
+              className="h-auto w-48"
+            />
             <p className="mt-4 mb-6 max-w-xs text-sm leading-relaxed text-white/60">
               {siteInfo.tagline}
             </p>
