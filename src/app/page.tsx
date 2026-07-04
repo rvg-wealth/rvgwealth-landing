@@ -41,9 +41,6 @@ export default function Home() {
         className="relative overflow-hidden flex items-center min-h-[calc(100dvh-81px)]"
         containerClassName="w-full"
       >
-        {/* ambient glow */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,138,46,0.14),transparent_55%)]" />
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-white/5 blur-[100px]" />
         <div className="relative flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 space-y-8">
             <Eyebrow tone="gold">Bespoke Financial Stewardship</Eyebrow>

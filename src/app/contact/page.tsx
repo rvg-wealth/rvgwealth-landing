@@ -20,8 +20,6 @@ export default function ContactPage() {
       className="relative overflow-hidden flex items-center min-h-[calc(100dvh-81px)]"
       containerClassName="w-full"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,138,46,0.14),transparent_55%)]" />
-
       <div className="relative">
         {/* Heading */}
         <div className="text-center mb-8">
