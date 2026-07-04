@@ -80,6 +80,8 @@ export default function MembershipPage() {
                 </div>
                 <a
                   href={tier.ctaredirect}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-auto w-full rounded-lg bg-gold py-4 text-center text-eyebrow text-ink shadow-[0_4px_15px_rgba(185,138,46,0.3)] transition-opacity hover:opacity-90"
                 >
                   {tier.cta}
@@ -113,6 +115,8 @@ export default function MembershipPage() {
                 </div>
                 <a
                   href={tier.ctaredirect}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-auto w-full rounded-lg border border-ink/15 py-4 text-center text-eyebrow text-ink transition-colors hover:border-ink hover:bg-white"
                 >
                   {tier.cta}
