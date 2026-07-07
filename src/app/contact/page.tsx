@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-eyebrow text-white/50">Call Us</p>
-                  <p className="text-body text-white">+91 96111 63687</p>
+                  <p className="text-body text-white">+91 87625 37905</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
